@@ -17,14 +17,14 @@ export default function Navbar() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-secondary/20 shadow-[0_0_15px_rgba(233,195,73,0.1)]">
-      <nav className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
-        <NavLink to="/" className="flex items-center h-12 w-auto overflow-hidden">
-          <span className="font-headline-sm text-headline-sm text-secondary italic">Lorrie's Enchanted Arts</span>
+      <nav className="flex flex-nowrap justify-between items-center gap-4 px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
+        <NavLink to="/" className="flex items-center h-12 w-auto overflow-hidden shrink-0">
+          <span className="font-headline-sm text-headline-sm text-secondary italic whitespace-nowrap">Lorrie's Enchanted Arts</span>
         </NavLink>
 
-        <ul className="hidden md:flex space-x-8">
+        <ul className="hidden xl:flex items-center gap-5 xl:gap-7 shrink-0">
           {LINKS.map((link) => (
-            <li key={link.to}>
+            <li key={link.to} className="whitespace-nowrap">
               <NavLink
                 to={link.to}
                 end={link.to === '/'}
@@ -40,15 +40,15 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <div className="hidden md:block">
-          <ShimmerButton as="link" to="/contact" className="!px-6 !py-2">
+        <div className="hidden xl:block shrink-0">
+          <ShimmerButton as="link" to="/contact" className="!px-6 !py-2 whitespace-nowrap">
             Magical Inquiry
           </ShimmerButton>
         </div>
 
         <button
           type="button"
-          className="md:hidden text-on-surface"
+          className="xl:hidden text-on-surface shrink-0"
           onClick={() => setOpen((v) => !v)}
           aria-label="Toggle menu"
         >
@@ -57,7 +57,7 @@ export default function Navbar() {
       </nav>
 
       {open && (
-        <div className="md:hidden bg-surface border-t border-secondary/10 px-margin-mobile py-4">
+        <div className="xl:hidden bg-surface border-t border-secondary/10 px-margin-mobile py-4">
           <ul className="flex flex-col gap-4">
             {LINKS.map((link) => (
               <li key={link.to}>
