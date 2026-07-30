@@ -89,7 +89,7 @@ export default function Home() {
         <div className="relative z-10 text-center px-margin-mobile max-w-4xl">
           {heroBadgeUrl && (
             <div className="flex justify-center mb-8">
-              <img src={heroBadgeUrl} alt="Once Upon A Party Logo" className="w-24 h-24 md:w-32 md:h-32 object-contain" />
+              <img src={heroBadgeUrl} alt="Once Upon A Party Logo" className="w-36 h-36 md:w-48 md:h-48 object-contain" />
             </div>
           )}
           <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight text-on-background">
