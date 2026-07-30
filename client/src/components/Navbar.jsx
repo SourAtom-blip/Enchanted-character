@@ -1,7 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { useState } from 'react';
 import ShimmerButton from './ShimmerButton.jsx';
-import useSiteSettings from '../hooks/useSiteSettings.js';
 
 const LINKS = [
   { to: '/', label: 'Home' },
@@ -15,17 +14,12 @@ const LINKS = [
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
-  const { logoUrl } = useSiteSettings();
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-secondary/20 shadow-[0_0_15px_rgba(233,195,73,0.1)]">
       <nav className="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
         <NavLink to="/" className="flex items-center h-12 w-auto overflow-hidden">
-          {logoUrl ? (
-            <img src={logoUrl} alt="Lorrie's Enchanted Arts Logo" className="h-full w-auto object-contain" />
-          ) : (
-            <span className="font-headline-sm text-headline-sm text-secondary italic">Lorrie's Enchanted Arts</span>
-          )}
+          <span className="font-headline-sm text-headline-sm text-secondary italic">Lorrie's Enchanted Arts</span>
         </NavLink>
 
         <ul className="hidden md:flex space-x-8">
