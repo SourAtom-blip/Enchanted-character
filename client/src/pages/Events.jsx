@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../api/client.js';
 import ShimmerButton from '../components/ShimmerButton.jsx';
 import useScrollReveal from '../hooks/useScrollReveal.js';
@@ -11,12 +12,12 @@ function FeaturedEvent({ event }) {
   const ref = useScrollReveal();
   return (
     <div ref={ref} className="reveal md:col-span-8 group relative rounded-xl overflow-hidden vellum-card gilded-edge flex flex-col md:flex-row min-h-[400px]">
-      <div className="md:w-1/2 h-64 md:h-auto relative">
+      <Link to={`/events/${event._id}`} className="md:w-1/2 h-64 md:h-auto relative block">
         <div
           className="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
           style={{ ...getImageStyle(event.imageUrl), backgroundColor: '#20201c' }}
         />
-      </div>
+      </Link>
       <div className="md:w-1/2 p-8 flex flex-col justify-center">
         <div className="flex items-center gap-2 mb-4 flex-wrap">
           {event.eventType && (
@@ -31,7 +32,9 @@ function FeaturedEvent({ event }) {
             </span>
           )}
         </div>
-        <h3 className="font-headline-md text-headline-md mb-4 text-secondary">{event.title}</h3>
+        <Link to={`/events/${event._id}`}>
+          <h3 className="font-headline-md text-headline-md mb-4 text-secondary hover:underline">{event.title}</h3>
+        </Link>
         {event.description && (
           <p className="text-on-surface-variant mb-6 font-body-md line-clamp-3">{event.description}</p>
         )}
@@ -49,7 +52,9 @@ function FeaturedEvent({ event }) {
             </div>
           )}
         </div>
-        <ShimmerButton className="w-full md:w-fit !px-8 !py-3">{event.ctaLabel || 'Reserve Seating'}</ShimmerButton>
+        <ShimmerButton as="link" to={`/events/${event._id}`} className="w-full md:w-fit !px-8 !py-3">
+          {event.ctaLabel || 'Reserve Seating'}
+        </ShimmerButton>
       </div>
     </div>
   );
@@ -60,28 +65,30 @@ function SecondaryEvent({ event }) {
   return (
     <div ref={ref} className="reveal md:col-span-4 group vellum-card rounded-xl p-6 flex flex-col transition-all hover:translate-y-[-8px]">
       {event.imageUrl && (
-        <div className="rounded-lg h-48 mb-6 overflow-hidden">
+        <Link to={`/events/${event._id}`} className="rounded-lg h-48 mb-6 overflow-hidden block">
           <div
             className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
             style={getImageStyle(event.imageUrl)}
           />
-        </div>
+        </Link>
       )}
       {event.eventType && (
         <span className="text-secondary font-label-md text-label-md mb-2 flex items-center gap-2">
           <span className="material-symbols-outlined text-[16px]">brush</span> {event.eventType}
         </span>
       )}
-      <h4 className="font-headline-sm text-headline-sm mb-3">{event.title}</h4>
+      <Link to={`/events/${event._id}`}>
+        <h4 className="font-headline-sm text-headline-sm mb-3 hover:underline">{event.title}</h4>
+      </Link>
       {event.description && <p className="text-on-surface-variant text-body-md mb-6 flex-grow">{event.description}</p>}
       <div className="flex justify-between items-center pt-4 border-t border-secondary/10">
         <div className="text-caption">
           <div className="font-bold text-on-surface">{event.date}</div>
           <div className="text-on-surface-variant uppercase tracking-tighter">{event.time}</div>
         </div>
-        <a className="text-secondary font-label-md uppercase tracking-wider flex items-center gap-1 hover:gap-3 transition-all cursor-pointer">
+        <Link to={`/events/${event._id}`} className="text-secondary font-label-md uppercase tracking-wider flex items-center gap-1 hover:gap-3 transition-all">
           Details <span className="material-symbols-outlined">arrow_forward</span>
-        </a>
+        </Link>
       </div>
     </div>
   );
@@ -92,7 +99,9 @@ function SmallEvent({ event }) {
   return (
     <div ref={ref} className="reveal md:col-span-4 vellum-card rounded-xl p-6 flex flex-col border border-secondary/5">
       {event.eventType && <span className="text-secondary font-label-md text-label-md mb-2">{event.eventType}</span>}
-      <h4 className="font-headline-sm text-headline-sm mb-3">{event.title}</h4>
+      <Link to={`/events/${event._id}`}>
+        <h4 className="font-headline-sm text-headline-sm mb-3 hover:underline">{event.title}</h4>
+      </Link>
       {event.description && <p className="text-on-surface-variant text-body-md mb-6">{event.description}</p>}
       <div className="mt-auto space-y-2">
         {event.location && (
@@ -106,12 +115,12 @@ function SmallEvent({ event }) {
           </div>
         )}
       </div>
-      <button
-        type="button"
-        className="mt-6 border border-secondary text-secondary py-2 rounded-lg font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-colors"
+      <Link
+        to={`/events/${event._id}`}
+        className="mt-6 text-center border border-secondary text-secondary py-2 rounded-lg font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-colors"
       >
         {event.ctaLabel || 'Inquire'}
-      </button>
+      </Link>
     </div>
   );
 }

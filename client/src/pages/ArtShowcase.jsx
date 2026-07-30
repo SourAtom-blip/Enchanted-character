@@ -1,34 +1,37 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import api from '../api/client.js';
 import useScrollReveal from '../hooks/useScrollReveal.js';
 import { getImageStyle } from '../utils/imageCrop.js';
 
 function Piece({ item }) {
   const ref = useScrollReveal();
-  const { title, subtitle, imageUrl } = item;
+  const { _id, title, subtitle, imageUrl } = item;
   return (
     <div ref={ref} className="reveal vellum-card ambient-glow rounded-xl p-4 flex flex-col group mb-gutter break-inside-avoid">
-      <div className="relative overflow-hidden rounded-lg mb-4 gilded-edge aspect-[4/5]">
+      <Link to={`/art-showcase/${_id}`} className="relative overflow-hidden rounded-lg mb-4 gilded-edge aspect-[4/5] block">
         <div
           className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
           style={{ ...getImageStyle(imageUrl), backgroundColor: '#20201c' }}
         />
         <div className="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
-          <span className="text-secondary font-label-md uppercase tracking-widest">Available for Purchase</span>
+          <span className="text-secondary font-label-md uppercase tracking-widest">View Piece</span>
         </div>
-      </div>
-      <h3 className="font-headline-sm text-headline-sm text-secondary mb-2">{title}</h3>
+      </Link>
+      <Link to={`/art-showcase/${_id}`}>
+        <h3 className="font-headline-sm text-headline-sm text-secondary mb-2 hover:underline">{title}</h3>
+      </Link>
       {subtitle && (
         <p className="font-body-md text-body-md text-on-surface-variant flex-grow italic mb-4 leading-relaxed">
           {subtitle}
         </p>
       )}
-      <button
-        type="button"
-        className="w-full border border-secondary text-secondary font-label-md py-3 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all"
+      <Link
+        to={`/art-showcase/${_id}`}
+        className="w-full text-center border border-secondary text-secondary font-label-md py-3 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all"
       >
         Inquire About This Piece
-      </button>
+      </Link>
     </div>
   );
 }

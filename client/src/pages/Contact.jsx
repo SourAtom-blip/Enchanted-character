@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+import { useSearchParams } from 'react-router-dom';
 import api from '../api/client.js';
 
 const EVENT_TYPES = ['Birthday Celebration', 'Corporate Gala', 'Wedding Reception', 'Community Event', 'Other Unique Celebration'];
@@ -24,6 +25,14 @@ export default function Contact() {
   });
   const [status, setStatus] = useState(null);
   const [submitting, setSubmitting] = useState(false);
+  const [searchParams] = useSearchParams();
+
+  useEffect(() => {
+    const subject = searchParams.get('subject');
+    if (subject) {
+      setForm((f) => ({ ...f, message: subject }));
+    }
+  }, [searchParams]);
 
   const handleChange = (e) => {
     setForm((f) => ({ ...f, [e.target.name]: e.target.value }));
