@@ -1,0 +1,382 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Art Showcase | Lorrie's Enchanted Arts</title>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,wght@0,400;0,600;0,700;1,400;1,600&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#4c4162",
+                    "on-primary-container": "#9783bd",
+                    "secondary-container": "#af8d11",
+                    "outline": "#948e99",
+                    "surface-container-highest": "#353531",
+                    "secondary-fixed-dim": "#e9c349",
+                    "error": "#ffb4ab",
+                    "on-secondary-container": "#342800",
+                    "on-primary-fixed-variant": "#4f3d72",
+                    "on-error": "#690005",
+                    "on-background": "#e5e2dc",
+                    "inverse-primary": "#68558b",
+                    "on-secondary": "#3c2f00",
+                    "on-surface-variant": "#cbc4d0",
+                    "surface": "#131410",
+                    "primary": "#d2bcfa",
+                    "surface-tint": "#d2bcfa",
+                    "on-secondary-fixed-variant": "#574500",
+                    "background": "#131410",
+                    "tertiary-container": "#2a203e",
+                    "on-tertiary": "#352b4a",
+                    "primary-container": "#2d1b4e",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#cec0e7",
+                    "primary-fixed": "#ebddff",
+                    "outline-variant": "#49454e",
+                    "surface-variant": "#353531",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#20201c",
+                    "on-tertiary-fixed": "#201634",
+                    "surface-container-lowest": "#0e0e0b",
+                    "on-surface": "#e5e2dc",
+                    "on-tertiary-container": "#9387ab",
+                    "secondary": "#e9c349",
+                    "tertiary": "#cec0e7",
+                    "on-primary-fixed": "#231043",
+                    "surface-bright": "#3a3935",
+                    "surface-container-high": "#2a2a26",
+                    "tertiary-fixed": "#eaddff",
+                    "inverse-surface": "#e5e2dc",
+                    "inverse-on-surface": "#31312d",
+                    "on-primary": "#38265a",
+                    "on-secondary-fixed": "#241a00",
+                    "secondary-fixed": "#ffe088",
+                    "surface-dim": "#131410",
+                    "surface-container-low": "#1c1c18",
+                    "primary-fixed-dim": "#d2bcfa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "unit": "8px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Literata"],
+                    "headline-md": ["Literata"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Literata"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Literata"],
+                    "caption": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body {
+            background-color: #131410;
+            color: #e5e2dc;
+            overflow-x: hidden;
+        }
+        .glass-vellum {
+            background: rgba(229, 226, 220, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(233, 195, 73, 0.1);
+        }
+        .gilded-edge {
+            border: 1px solid rgba(233, 195, 73, 0.3);
+        }
+        .ambient-glow:hover {
+            box-shadow: 0 0 25px rgba(210, 188, 250, 0.2);
+        }
+        .shimmer-effect {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer-effect::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(
+                45deg,
+                transparent 25%,
+                rgba(233, 195, 73, 0.1) 50%,
+                transparent 75%
+            );
+            animation: shimmer 6s infinite;
+        }
+        @keyframes shimmer {
+            0% { transform: translate(-30%, -30%); }
+            100% { transform: translate(30%, 30%); }
+        }
+        .masonry-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            grid-auto-rows: 10px;
+        }
+        .masonry-item {
+            grid-row-end: span 45;
+        }
+        .masonry-item.tall {
+            grid-row-end: span 60;
+        }
+        .masonry-item.short {
+            grid-row-end: span 35;
+        }
+    </style>
+</head>
+<body class="font-body-md text-body-md selection:bg-secondary/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 right-0 z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-secondary/20 shadow-[0_0_15px_rgba(233,195,73,0.1)]">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center h-12">
+    <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANaU3yB_Z8geT6VqfbnboTreGnRV3zFybc3uXxaeUdNMZ_gFFdxWauN-qNQdtmCwstRauzZO7LDrBvNO1VbKrZlp1rtSPcu90oF-Uji9B_GzocthENLDNb8hx3I_8WlARftql9wwzWigRpyDSgwcFWnYk3DOFjQgl88cTJcp1ENS3Iy374MaZR013lu8CmoQaXl3Yj5DaBelRP07RVCXTTx_67HgTdxeKzBrA7dFIneAAZ1lj8NbdVuMfHPJONOGk5tNeqeknyJNI" alt="Lorrie's Enchanted Arts Logo" class="h-full w-auto object-contain">
+</div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">About Us</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Characters</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Gallery</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary dark:text-secondary-fixed border-b-2 border-secondary pb-1" href="#">Art Showcase</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-md text-label-md uppercase tracking-wider hover:scale-105 transition-transform duration-200 shimmer-effect">
+                Magical Inquiry
+            </button>
+</div>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-32 pb-24">
+<!-- Hero Header -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-20 text-center relative">
+<div class="absolute -top-20 left-1/2 -translate-x-1/2 w-full h-64 opacity-20 pointer-events-none">
+
+</div>
+<h1 class="font-display-lg text-display-lg mb-4 text-secondary">The Enchanted Gallery</h1>
+<p class="font-body-lg text-body-lg max-w-2xl mx-auto text-on-surface-variant italic">
+                Step into a world where every brushstroke tells a story. Lorrie's original paintings blend classical technique with a whimsical spirit.
+            </p>
+</section>
+<!-- Art Gallery Grid (Asymmetrical Masonry) -->
+<section class="max-w-container-max mx-auto px-margin-desktop mb-24">
+<div class="masonry-grid gap-gutter">
+<!-- Piece 1 -->
+<div class="masonry-item tall glass-vellum rounded-xl p-4 flex flex-col group ambient-glow transition-all duration-500 duration-700 opacity-100 translate-y-0">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-[3/4] gilded-edge">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A whimsical oil painting of a young princess standing in a field of lavender under a starlit sky. The painting uses rich deep purples and glowing gold highlights. The brushwork is impressionistic yet detailed, evoking a sense of magical realism and professional artistry. The lighting is ethereal, coming from glowing fireflies around the character." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVazThhLBMAm1qjINj1HtFCF-JDvLVRKj8Zpg9YoYaeaKTB6JIAzYqv5eQCzySqAomhZrmNcqnJkGvgALeAeedA5LEoPv9-nDK7wU6bYSDuwO_cwjRRGxkLS7bh4tGn8eW8OMoZJJlvayI-zUR179f6xO0dOnNbsh1udfrXFtQni6W01xYU7LlR1doh6pKnfm0tLbOPWe8eokxLY4KI9VluSU4M7Ur43D0wFGRxygnkW3PZMXac2SFTwpYEglNNvZlzGRj5sqwrCk">
+<div class="absolute inset-0 bg-gradient-to-t from-surface-dim/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-6">
+<span class="text-secondary font-label-md uppercase tracking-widest">Available for Purchase</span>
+</div>
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">Lavender Dreams</h3>
+<p class="font-body-md text-body-md text-on-surface-variant flex-grow italic mb-4 leading-relaxed">
+                        An ethereal exploration of childhood wonder, capturing the quiet magic of a moonlit lavender field.
+                    </p>
+<button class="w-full border border-secondary text-secondary font-label-md py-3 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all" onclick="openModal('Lavender Dreams')">
+                        Inquire About This Piece
+                    </button>
+</div>
+<!-- Piece 2 -->
+<div class="masonry-item short glass-vellum rounded-xl p-4 flex flex-col group ambient-glow transition-all duration-500 duration-700 opacity-100 translate-y-0">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-square gilded-edge">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A portrait of a mysterious forest guardian with golden antlers and glowing eyes. The background is a dense, magical forest with floating dust motes and soft emerald light. The style is professional and highly textured, blending classical portraiture with fantasy elements. Dark midnight purple shadows contrast with vibrant gold accents." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjQ9wQ7fMbn9C2w7M1ZFj6syDyLeyounez1HNO3HKdxXJjXzID-z0DyBcl0dEsKqDKI81QgajOf5n5EMTlT91A9d5oGy78vmwW0FxLPNqrm2wNjir9bSbthpdNa8XgmDOBArnhNMRaMNu3YFOGURLl_PwX0SxB4cp0pgJ82fDW9HyojEnV8fV4-vZOvvEATSmSo_Q0qVBnRgrqyLh2i05Q196NuavP1xoZxQor_iyY3o3XQWzeBqMgDg-zWXMh4H_dnpKx7og3yls">
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">The Guardian</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 italic leading-relaxed">
+                        A majestic study of nature's hidden protectors, rendered in rich acrylic textures.
+                    </p>
+<button class="w-full border border-secondary text-secondary font-label-md py-3 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all" onclick="openModal('The Guardian')">
+                        Inquire About This Piece
+                    </button>
+</div>
+<!-- Piece 3 -->
+<div class="masonry-item glass-vellum rounded-xl p-4 flex flex-col group ambient-glow transition-all duration-500 duration-700 opacity-100 translate-y-0">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-[4/5] gilded-edge">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A vibrant landscape painting of a floating island castle suspended in a sunset sky of pink, orange, and deep violet. Waterfalls spill from the island's edges into the clouds. The lighting is dramatic and warm, creating a high-end fantasy atmosphere. The brushstrokes are bold and energetic, showing Lorrie's professional art style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCDExoZrRITq8YhcTL0yYYpT7TKHyz3wABAEGmBKzEzROYRlm_j4fOu_ycPEBafHeuxN8fBjCWL3yQYQecGSsX9SPnDkD66V630-DERQQD3lQPb5zMooAT_Un7-pNYiD6080RjY183gzri5u9WG07CJm17tF-Jh9WRofnqb_W50j2qpxflDFhLTdVqM-1lln3TMosZQpsponoObfY-eWWeWrTWG3zZX95EToOxwv7KfL6pIMTnzbR2TPf_mSdCmU6jRndE4fHodDgU">
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">Celestial Citadel</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 italic leading-relaxed">
+                        A journey beyond the horizon where the architecture of dreams meets the colors of twilight.
+                    </p>
+<button class="w-full border border-secondary text-secondary font-label-md py-3 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all" onclick="openModal('Celestial Citadel')">
+                        Inquire About This Piece
+                    </button>
+</div>
+<!-- Piece 4 -->
+<div class="masonry-item tall glass-vellum rounded-xl p-4 flex flex-col group ambient-glow transition-all duration-500 duration-700 opacity-100 translate-y-0">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-[3/4] gilded-edge">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="An intimate portrait of a mermaid resting on a glowing coral reef beneath a bioluminescent sea. Cool turquoise and lavender tones dominate the palette, with warm gold highlights on her scales. The artwork is serene and detailed, focusing on the play of light through deep water. Professional digital painting style with a vellum-like texture." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxCPNOpmmyX_9G168vrhsCgWHU-JmqWZU9JLD7G1E5EA66X7GzE-pRU8YKDnm5v_hvYe3mESUJ63yP912NfEwt0LQk32QNRmJ13KZBi_9vDr_AYoiinb2YCyAs6A9bTLlkN-Cjocnd1uOrdIXfkagnhak9PucziwMDhp34hXPxlYVrVIXMLE36_JciU2oFnDA4MXpQaiZ8hTTxDTUv5Tcr-w-GK_dOuQWewnxPYXtMPBXNdn1wTkmllWijnMPMnisQMMkgnjjmvqI">
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">Abyssal Serenade</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 italic leading-relaxed">
+                        Capturing the silent, glowing beauty of the deep ocean's most elusive inhabitants.
+                    </p>
+<button class="w-full border border-secondary text-secondary font-label-md py-3 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all" onclick="openModal('Abyssal Serenade')">
+                        Inquire About This Piece
+                    </button>
+</div>
+<!-- Piece 5 -->
+<div class="masonry-item short glass-vellum rounded-xl p-4 flex flex-col group ambient-glow transition-all duration-500 duration-700 opacity-100 translate-y-0">
+<div class="relative overflow-hidden rounded-lg mb-4 aspect-video gilded-edge">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A wide cinematic painting of a magical tea party in a sun-drenched autumn garden. Whimsical characters are seated around a long table filled with glowing tea sets and pastries. The lighting is warm and hazy, filled with golden hour dust motes. The style is inviting and storybook-like, emphasizing professional character design and composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBbR5jrdgSMXCfdNq3ahEMDual6gXhT2OSdDlvnSmlkWsO-jMW8mHJH0WLS9u7u-bPcdF0cUsrtz-qXXrNxwqrf3SJDKTCFe8gt90DmGKbtxUDtvpyoaiMnxbU8uxKloX82IJmoOXid-tEKbuzKaYRR7eIiM5A9yNZCe6r3FJy_C8CwINs9ZEEWayr3LU_pZ1CnfquBBRIgbjhx2KRrLWgUnhtu1IdfT_U2deWx3FTcxybeYWORPD4uOZiV03Cwd94r8gyXDY41xkc">
+</div>
+<h3 class="font-headline-sm text-headline-sm text-secondary mb-2">Autumn Reverie</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4 italic leading-relaxed">
+                        A celebration of connection and whimsy amidst the falling leaves of an enchanted garden.
+                    </p>
+<button class="w-full border border-secondary text-secondary font-label-md py-3 rounded-lg hover:bg-secondary hover:text-on-secondary transition-all" onclick="openModal('Autumn Reverie')">
+                        Inquire About This Piece
+                    </button>
+</div>
+</div>
+</section>
+<!-- Payment & Commission Info -->
+<section class="max-w-container-max mx-auto px-margin-desktop">
+<div class="glass-vellum rounded-2xl p-12 text-center relative overflow-hidden">
+<div class="absolute inset-0 opacity-10 pointer-events-none">
+
+</div>
+<div class="relative z-10">
+<span class="material-symbols-outlined text-secondary text-5xl mb-6" style="font-variation-settings: 'FILL' 1;">palette</span>
+<h2 class="font-headline-md text-headline-md mb-6">Bespoke Creations</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8 max-w-3xl mx-auto leading-relaxed">
+                        Looking for something uniquely yours? Lorrie accepts limited commissions throughout the year. Whether it's a portrait of a loved one or a scene from your own imagination, each custom piece is crafted with the same magical touch.
+                    </p>
+<div class="flex flex-wrap justify-center gap-8 items-center border-t border-secondary/20 pt-8 mt-8">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">payments</span>
+<span class="font-label-md uppercase">Venmo / PayPal / Cash App</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">verified_user</span>
+<span class="font-label-md uppercase">Secure Personal Transactions</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Modal Form (Inquiry) -->
+<div class="fixed inset-0 z-[100] hidden bg-background/90 backdrop-blur-md flex items-center justify-center p-4" id="inquiryModal">
+<div class="glass-vellum w-full max-w-xl rounded-2xl p-8 gilded-edge relative">
+<button class="absolute top-4 right-4 text-on-surface-variant hover:text-secondary" onclick="closeModal()">
+<span class="material-symbols-outlined">close</span>
+</button>
+<h2 class="font-headline-md text-headline-md text-secondary mb-2" id="modalTitle">Inquire About Art</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Payments are handled personally via Venmo, Cash App, or PayPal. Lorrie will reach out within 24 hours.</p>
+<form class="space-y-4">
+<div>
+<label class="block font-label-md text-label-md mb-2 uppercase tracking-wide opacity-70">Your Name</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" type="text">
+</div>
+<div>
+<label class="block font-label-md text-label-md mb-2 uppercase tracking-wide opacity-70">Email Address</label>
+<input class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" type="email">
+</div>
+<div>
+<label class="block font-label-md text-label-md mb-2 uppercase tracking-wide opacity-70">Message</label>
+<textarea class="w-full bg-surface-container-low border border-outline-variant rounded-lg p-3 text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary transition-all" placeholder="Tell Lorrie what you love about this piece..." rows="4"></textarea>
+</div>
+<button class="w-full bg-secondary text-on-secondary font-label-md py-4 rounded-lg shimmer-effect uppercase tracking-widest hover:scale-[1.02] transition-transform" type="submit">
+                    Send Magical Inquiry
+                </button>
+</form>
+</div>
+</div>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto items-center">
+<div class="text-center md:text-left">
+<div class="font-headline-sm text-headline-sm text-secondary mb-4">Lorrie's Entertainment</div>
+<p class="font-body-md text-body-md opacity-80 max-w-xs">Crafting magical moments through performance and fine art.</p>
+</div>
+<div class="flex justify-center space-x-6">
+<a class="text-on-surface-variant hover:text-secondary opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary/50" href="#">Facebook</a>
+<a class="text-on-surface-variant hover:text-secondary opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary/50" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-secondary opacity-80 hover:opacity-100 transition-opacity hover:underline decoration-secondary/50" href="#">YouTube</a>
+</div>
+<div class="text-center md:text-right">
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    © 2024 Lorrie's Character Entertainment. All performers are fully vetted and background-checked for your family's safety.
+                </p>
+<div class="mt-2 space-x-4">
+<a class="text-caption font-caption uppercase tracking-tighter opacity-60 hover:opacity-100" href="#">Privacy Policy</a>
+<a class="text-caption font-caption uppercase tracking-tighter opacity-60 hover:opacity-100" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        function openModal(title) {
+            const modal = document.getElementById('inquiryModal');
+            const titleEl = document.getElementById('modalTitle');
+            titleEl.textContent = 'Inquire: ' + title;
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('inquiryModal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on background click
+        window.onclick = function(event) {
+            const modal = document.getElementById('inquiryModal');
+            if (event.target == modal) {
+                closeModal();
+            }
+        }
+
+        // Intersection Observer for fade-in animations
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.masonry-item').forEach(item => {
+            item.classList.add('opacity-0', 'translate-y-10', 'transition-all', 'duration-700');
+            observer.observe(item);
+        });
+    </script>
+
+
+</body></html>

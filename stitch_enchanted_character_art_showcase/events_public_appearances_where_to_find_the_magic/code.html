@@ -1,0 +1,457 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Events &amp; Public Appearances | Lorrie's Enchanted Arts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;family=Literata:ital,wght@0,600;0,700;1,600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        :root {
+            --glass-bg: rgba(229, 226, 220, 0.05);
+            --glass-border: rgba(233, 195, 73, 0.15);
+            --gold-glow: 0 0 15px rgba(233, 195, 73, 0.2);
+        }
+
+        body {
+            background-color: #131410;
+            color: #e5e2dc;
+            overflow-x: hidden;
+        }
+
+        .glass-vellum {
+            background: var(--glass-bg);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid var(--glass-border);
+        }
+
+        .gilded-edge {
+            border: 1px solid rgba(233, 195, 73, 0.3);
+            box-shadow: var(--gold-glow);
+        }
+
+        .shimmer-btn {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shimmer-btn::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 4s infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-150%) rotate(45deg); }
+            100% { transform: translateX(150%) rotate(45deg); }
+        }
+
+        .floating-motes {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<!-- Tailwind Config Injection -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-tertiary-fixed-variant": "#4c4162",
+                    "on-primary-container": "#9783bd",
+                    "secondary-container": "#af8d11",
+                    "outline": "#948e99",
+                    "surface-container-highest": "#353531",
+                    "secondary-fixed-dim": "#e9c349",
+                    "error": "#ffb4ab",
+                    "on-secondary-container": "#342800",
+                    "on-primary-fixed-variant": "#4f3d72",
+                    "on-error": "#690005",
+                    "on-background": "#e5e2dc",
+                    "inverse-primary": "#68558b",
+                    "on-secondary": "#3c2f00",
+                    "on-surface-variant": "#cbc4d0",
+                    "surface": "#131410",
+                    "primary": "#d2bcfa",
+                    "surface-tint": "#d2bcfa",
+                    "on-secondary-fixed-variant": "#574500",
+                    "background": "#131410",
+                    "tertiary-container": "#2a203e",
+                    "on-tertiary": "#352b4a",
+                    "primary-container": "#2d1b4e",
+                    "error-container": "#93000a",
+                    "tertiary-fixed-dim": "#cec0e7",
+                    "primary-fixed": "#ebddff",
+                    "outline-variant": "#49454e",
+                    "surface-variant": "#353531",
+                    "on-error-container": "#ffdad6",
+                    "surface-container": "#20201c",
+                    "on-tertiary-fixed": "#201634",
+                    "surface-container-lowest": "#0e0e0b",
+                    "on-surface": "#e5e2dc",
+                    "on-tertiary-container": "#9387ab",
+                    "secondary": "#e9c349",
+                    "tertiary": "#cec0e7",
+                    "on-primary-fixed": "#231043",
+                    "surface-bright": "#3a3935",
+                    "surface-container-high": "#2a2a26",
+                    "tertiary-fixed": "#eaddff",
+                    "inverse-surface": "#e5e2dc",
+                    "inverse-on-surface": "#31312d",
+                    "on-primary": "#38265a",
+                    "on-secondary-fixed": "#241a00",
+                    "secondary-fixed": "#ffe088",
+                    "surface-dim": "#131410",
+                    "surface-container-low": "#1c1c18",
+                    "primary-fixed-dim": "#d2bcfa"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "gutter": "24px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "unit": "8px",
+                    "container-max": "1200px"
+            },
+            "fontFamily": {
+                    "body-md": ["Plus Jakarta Sans"],
+                    "headline-sm": ["Literata"],
+                    "headline-md": ["Literata"],
+                    "body-lg": ["Plus Jakarta Sans"],
+                    "display-lg-mobile": ["Literata"],
+                    "label-md": ["Plus Jakarta Sans"],
+                    "display-lg": ["Literata"],
+                    "caption": ["Plus Jakarta Sans"]
+            },
+            "fontSize": {
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+</head>
+<body class="font-body-md text-on-surface selection:bg-secondary/30">
+<!-- Atmospheric Background Animation -->
+
+<canvas class="floating-motes" id="motes" width="1280" height="3123"></canvas>
+<!-- Top Navigation Bar -->
+<header class="sticky top-0 z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-secondary/20 shadow-sm">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="h-12 flex items-center"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANaU3yB_Z8geT6VqfbnboTreGnRV3zFybc3uXxaeUdNMZ_gFFdxWauN-qNQdtmCwstRauzZO7LDrBvNO1VbKrZlp1rtSPcu90oF-Uji9B_GzocthENLDNb8hx3I_8WlARftql9wwzWigRpyDSgwcFWnYk3DOFjQgl88cTJcp1ENS3Iy374MaZR013lu8CmoQaXl3Yj5DaBelRP07RVCXTTx_67HgTdxeKzBrA7dFIneAAZ1lj8NbdVuMfHPJONOGk5tNeqeknyJNI" alt="Lorrie's Enchanted Arts Logo" class="h-full w-auto object-contain"></div>
+<div class="hidden md:flex items-center gap-8">
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">About Us</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Characters</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary dark:text-secondary-fixed border-b-2 border-secondary pb-1" href="#">Gallery</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Art Showcase</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Contact</a>
+</div>
+<button class="bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-md text-label-md uppercase tracking-widest shimmer-btn transition-transform hover:scale-105 active:scale-95">
+                Magical Inquiry
+            </button>
+</nav>
+</header>
+<main class="relative z-10">
+<!-- Hero Section -->
+<section class="py-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto text-center">
+<span class="font-label-md text-label-md text-secondary uppercase tracking-[0.3em] mb-4 block">Magic in the Making</span>
+<h1 class="font-display-lg text-display-lg-mobile md:text-display-lg mb-6 leading-tight">Events &amp; Public <br class="hidden md:block"> Appearances</h1>
+<p class="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
+                Join us for spectacular public gatherings, whimsical workshops, and community events where storybooks come to life before your eyes.
+            </p>
+</section>
+<!-- Upcoming Events Bento Grid -->
+<section class="pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Main Featured Event -->
+<div class="md:col-span-8 group relative rounded-xl overflow-hidden glass-vellum gilded-edge flex flex-col md:flex-row min-h-[400px]">
+<div class="md:w-1/2 h-64 md:h-auto relative">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="An elegant afternoon tea setting in a lush, blooming garden with vintage porcelain cups and a character performer dressed as a classic fairytale princess. The lighting is warm and ethereal, highlighting the gold trim on the tea set and the intricate embroidery of the princess's gown. The atmosphere is magical and high-end, evoking a sense of luxury and wonder." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCrjKWHIFjxsDsfhhRdF-X_BwIDOL8cvsZbIpAJn5Mkr4Ucb6dEACfHdT1oV-d0lUo_2oIktaDJWROUCC3J4-LdhlFD0i_3UjNPEE2kWG0-WWxiSi2ZoVXAwzKGrNzVeb_U6_7sYXyHLqRfmk9buhlAuYvUkoNbfwhFzuywOw4HcBeSllh7YM866J8CPrXWBhHXvTspwDnicRkkqgQzCvLZVhHJqDL1i1JgVDILZEST3-OUp0d_daHcjSUD7HPHqsUHUxp_05MxLQ4')">
+</div>
+</div>
+<div class="md:w-1/2 p-8 flex flex-col justify-center">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary/20 text-primary px-3 py-1 rounded-full text-caption font-label-md uppercase tracking-wider">Premium Experience</span>
+<span class="text-secondary flex items-center gap-1 font-label-md text-label-md">
+<span class="material-symbols-outlined text-[18px]">calendar_today</span>
+                                July 15, 2024
+                            </span>
+</div>
+<h3 class="font-headline-md text-headline-md mb-4 text-secondary">The Enchanted Princess Tea Party</h3>
+<p class="text-on-surface-variant mb-6 font-body-md line-clamp-3">
+                            A royal afternoon of refined pastries, herbal teas, and private audiences with three of our most beloved characters in the historic Conservatory Garden.
+                        </p>
+<div class="flex flex-col gap-3 mb-8">
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary">location_on</span>
+<span class="font-label-md">The Glass Conservatory, Oak Ridge</span>
+</div>
+<div class="flex items-center gap-2 text-on-surface">
+<span class="material-symbols-outlined text-secondary">schedule</span>
+<span class="font-label-md">2:00 PM — 4:30 PM</span>
+</div>
+</div>
+<button class="bg-secondary text-on-secondary px-8 py-3 rounded-lg font-label-md uppercase tracking-widest shimmer-btn w-full md:w-fit">
+                            Reserve Seating
+                        </button>
+</div>
+</div>
+<!-- Secondary Event 1 -->
+<div class="md:col-span-4 group glass-vellum rounded-xl p-6 flex flex-col transition-all hover:translate-y-[-8px]">
+<div class="rounded-lg h-48 mb-6 overflow-hidden">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110" data-alt="An artistic studio setting with wine glasses and canvases, where a professional artist and a character in fantasy costume guide a group. Deep purple and gold tones dominate the palette, with soft lavender ambient lighting. The mood is sophisticated and creative, blending adult leisure with whimsical storytelling." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBG12bpbMTNgoqHZiqyub85ifX1LyWJen40LGoKIll13XGiG-h9GyToHd8eCUUmDFIqKP3FGErnZ-Rge1VrlrPfg1_Zf3I9h0PNhE1WOELDLlxla1JL1fG13W06OeJE0stieU40FOtWa8VkaLcX8uZl6ptiuSZS8hLwqgxz9D2EynYgFSI41VaI-G_2Il5nh92NyMUjkivCUkCu3dPAU_cdkG1xhySUbC2r5G1f25M1FvI7URioeuBuOFMZtT0C8tWohpSLnRYxa6k')">
+</div>
+</div>
+<span class="text-secondary font-label-md text-label-md mb-2 flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px]">brush</span> Art &amp; Spirits
+                    </span>
+<h4 class="font-headline-sm text-headline-sm mb-3">Wine &amp; Canvas: Fantasy Edition</h4>
+<p class="text-on-surface-variant text-body-md mb-6 flex-grow">
+                        Sip on artisanal vintages while painting a live character model. Perfect for dates or creative friend groups.
+                    </p>
+<div class="flex justify-between items-center pt-4 border-t border-secondary/10">
+<div class="text-caption">
+<div class="font-bold text-on-surface">Aug 02</div>
+<div class="text-on-surface-variant uppercase tracking-tighter">7:00 PM</div>
+</div>
+<a class="text-secondary font-label-md uppercase tracking-wider flex items-center gap-1 hover:gap-3 transition-all" href="#">
+                            Details <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Small Event Cards (Row 2) -->
+<div class="md:col-span-4 glass-vellum rounded-xl p-6 flex flex-col border border-secondary/5">
+<span class="text-secondary font-label-md text-label-md mb-2">Community Appearance</span>
+<h4 class="font-headline-sm text-headline-sm mb-3">Fairytale Festival</h4>
+<p class="text-on-surface-variant text-body-md mb-6">
+                        Meet our full cast of characters at the annual City Park fair. Photo ops and live performances throughout the day.
+                    </p>
+<div class="mt-auto space-y-2">
+<div class="flex items-center gap-2 text-on-surface-variant text-caption">
+<span class="material-symbols-outlined text-secondary scale-75">location_on</span> Central Park
+                        </div>
+<div class="flex items-center gap-2 text-on-surface-variant text-caption">
+<span class="material-symbols-outlined text-secondary scale-75">calendar_today</span> September 12
+                        </div>
+</div>
+<button class="mt-6 border border-secondary text-secondary py-2 rounded-lg font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-colors">Inquire</button>
+</div>
+<div class="md:col-span-4 glass-vellum rounded-xl p-6 flex flex-col border border-secondary/5">
+<span class="text-secondary font-label-md text-label-md mb-2">Workshop</span>
+<h4 class="font-headline-sm text-headline-sm mb-3">Royal Academy Workshop</h4>
+<p class="text-on-surface-variant text-body-md mb-6">
+                        Interactive etiquette and storytelling workshop for children. Learn the secrets of character acting and royal grace.
+                    </p>
+<div class="mt-auto space-y-2">
+<div class="flex items-center gap-2 text-on-surface-variant text-caption">
+<span class="material-symbols-outlined text-secondary scale-75">location_on</span> Lorrie's Studio
+                        </div>
+<div class="flex items-center gap-2 text-on-surface-variant text-caption">
+<span class="material-symbols-outlined text-secondary scale-75">calendar_today</span> October 05
+                        </div>
+</div>
+<button class="mt-6 border border-secondary text-secondary py-2 rounded-lg font-label-md uppercase tracking-widest hover:bg-secondary/10 transition-colors">Inquire</button>
+</div>
+<!-- CTA Card -->
+<div class="md:col-span-4 rounded-xl bg-primary-container p-8 flex flex-col justify-center items-center text-center relative overflow-hidden">
+<div class="absolute top-0 right-0 w-32 h-32 bg-secondary opacity-10 rounded-full translate-x-16 -translate-y-16"></div>
+<div class="material-symbols-outlined text-primary mb-4" style="font-size: 48px;">auto_awesome</div>
+<h4 class="font-headline-sm text-headline-sm text-on-primary-container mb-4">Don't see your event?</h4>
+<p class="text-on-surface-variant text-body-md mb-6">
+                        We are constantly adding new appearances. Sign up for our newsletter to be the first to know about upcoming dates.
+                    </p>
+<form class="w-full space-y-3">
+<input class="w-full bg-surface/50 border border-on-primary-container/20 rounded-lg px-4 py-2 focus:ring-2 focus:ring-secondary focus:border-transparent outline-none transition-all placeholder:text-on-surface-variant/50" placeholder="Your magical email..." type="email">
+<button class="w-full bg-secondary text-on-secondary py-2 rounded-lg font-label-md uppercase tracking-widest shimmer-btn" type="button">Subscribe</button>
+</form>
+</div>
+</div>
+</section>
+<!-- Private Venue Booking Section (Future Scalability) -->
+<section class="py-24 bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+<div class="grid grid-cols-6 h-full">
+<div class="border-r border-secondary/30 h-full"></div>
+<div class="border-r border-secondary/30 h-full"></div>
+<div class="border-r border-secondary/30 h-full"></div>
+<div class="border-r border-secondary/30 h-full"></div>
+<div class="border-r border-secondary/30 h-full"></div>
+<div class="border-r border-secondary/30 h-full"></div>
+</div>
+</div>
+<div class="max-w-container-max mx-auto px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
+<div class="order-2 md:order-1">
+<div class="rounded-2xl overflow-hidden gilded-edge aspect-[4/5] relative">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A grand ballroom with vaulted ceilings, crystal chandeliers, and walls lined with mystical paintings. The floor is polished marble reflecting the warm amber and purple light. The scene is empty but set with elegant banquet tables, waiting for a royal celebration. The style is classic luxury with a magical, storybook twist." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuD5CCW0xZVQquXf04zb26Gbj-cIl0yqbqc2DKviVCweMpAPtZ7t-U7-TWneENLJFxiVwxMIF4_jJcDjdzXiHHdA7xomdT3pLTEFzp4ssCG83VGuEoUTRjPEWULziz88G9mrTJu7xhH19RRZhrmV0lM3b4JWqPpKrttCUQ91p471fJOOfu09LbaeoUq30zq_X1Ryb1vYlAPLxKK_EynuBVJV0OIsi-JdQCaCA43l8NyGdaG0f0aiXg48SzO5hxFrXuuxt4b6auzUkps')">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+<div class="absolute bottom-8 left-8">
+<span class="font-label-md text-secondary uppercase tracking-widest">Coming Soon</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">The Grand Atelier Venue</h3>
+</div>
+</div>
+</div>
+<div class="order-1 md:order-2">
+<span class="font-label-md text-secondary uppercase tracking-[0.2em] mb-4 block">Exclusive Bookings</span>
+<h2 class="font-display-lg text-display-lg-mobile md:text-headline-md lg:text-display-lg mb-6">Host Your Legacy</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-8">
+                        Our future dedicated venue space will offer a fully immersive backdrop for your most cherished milestones. From curated princess parties to gothic-themed corporate retreats, the Grand Atelier is designed to be the physical embodiment of our artistic vision.
+                    </p>
+<div class="space-y-6 mb-12">
+<div class="flex items-start gap-4">
+<div class="bg-primary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">theater_comedy</span>
+</div>
+<div>
+<h5 class="font-headline-sm text-on-surface mb-1">Character Concierge</h5>
+<p class="text-on-surface-variant font-body-md">Dedicated performers assigned to your event from start to finish.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="bg-secondary/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-secondary">palette</span>
+</div>
+<div>
+<h5 class="font-headline-sm text-on-surface mb-1">Custom Scenography</h5>
+<p class="text-on-surface-variant font-body-md">Personalized set design and lighting to match your specific story theme.</p>
+</div>
+</div>
+</div>
+<button class="bg-surface border border-secondary text-secondary px-10 py-4 rounded-full font-label-md uppercase tracking-[0.2em] hover:bg-secondary hover:text-on-secondary transition-all duration-500 flex items-center gap-4">
+                        Join Waitlist <span class="material-symbols-outlined">verified</span>
+</button>
+</div>
+</div>
+</section>
+<!-- Final Call to Action -->
+<section class="py-24 text-center px-margin-mobile">
+<div class="max-w-3xl mx-auto glass-vellum p-12 rounded-3xl gilded-edge">
+<h3 class="font-headline-md text-headline-md mb-4 text-secondary italic">Ready to host your own magic?</h3>
+<p class="font-body-lg text-on-surface-variant mb-8">
+                    While our venue is in preparation, we are currently booking private home and external venue appearances. Let us bring the enchantment to you.
+                </p>
+<div class="flex flex-col md:flex-row justify-center gap-4">
+<button class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-label-md uppercase tracking-widest shimmer-btn">Book Character</button>
+<button class="border border-on-surface-variant text-on-surface px-10 py-4 rounded-full font-label-md uppercase tracking-widest hover:bg-on-surface-variant/10 transition-colors">View Pricing</button>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="flex flex-col gap-4">
+<div class="font-headline-sm text-headline-sm text-secondary">Lorrie's Enchanted Arts</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">Creating tangible wonder through character entertainment, artisanal workshops, and immersive storytelling.</p>
+</div>
+<div class="flex flex-col gap-2">
+<h6 class="font-label-md text-label-md text-secondary uppercase mb-2">Connect</h6>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-opacity" href="#">Facebook</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-opacity" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-opacity" href="#">YouTube</a>
+</div>
+<div class="flex flex-col gap-2">
+<h6 class="font-label-md text-label-md text-secondary uppercase mb-2">Legal</h6>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-opacity" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-opacity" href="#">Terms of Service</a>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-60 mt-4 leading-tight">
+                    © 2024 Lorrie's Character Entertainment. All performers are fully vetted and background-checked for your family's safety.
+                </p>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction: Particle Motes Animation
+        const canvas = document.getElementById('motes');
+        const ctx = canvas.getContext('2d');
+        let particles = [];
+
+        function initCanvas() {
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+        }
+
+        class Particle {
+            constructor() {
+                this.x = Math.random() * canvas.width;
+                this.y = Math.random() * canvas.height;
+                this.size = Math.random() * 1.5 + 0.5;
+                this.speedX = Math.random() * 0.5 - 0.25;
+                this.speedY = Math.random() * 0.5 - 0.25;
+                this.opacity = Math.random() * 0.5;
+            }
+            update() {
+                this.x += this.speedX;
+                this.y += this.speedY;
+                if (this.x > canvas.width) this.x = 0;
+                if (this.x < 0) this.x = canvas.width;
+                if (this.y > canvas.height) this.y = 0;
+                if (this.y < 0) this.y = canvas.height;
+            }
+            draw() {
+                ctx.fillStyle = `rgba(233, 195, 73, ${this.opacity})`;
+                ctx.beginPath();
+                ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
+                ctx.fill();
+            }
+        }
+
+        function createParticles() {
+            particles = [];
+            const count = (canvas.width * canvas.height) / 15000;
+            for (let i = 0; i < count; i++) {
+                particles.push(new Particle());
+            }
+        }
+
+        function animate() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            particles.forEach(p => {
+                p.update();
+                p.draw();
+            });
+            requestAnimationFrame(animate);
+        }
+
+        window.addEventListener('resize', () => {
+            initCanvas();
+            createParticles();
+        });
+
+        initCanvas();
+        createParticles();
+        animate();
+    </script>
+
+
+</body></html>

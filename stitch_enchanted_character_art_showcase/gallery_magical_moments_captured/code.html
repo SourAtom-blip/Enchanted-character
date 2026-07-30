@@ -1,0 +1,341 @@
+<!DOCTYPE html><html class="dark" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Gallery | Lorrie's Enchanted Arts</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:wght@400;600;700&amp;family=Plus+Jakarta+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<style>
+        .glass-panel {
+            background: rgba(229, 226, 220, 0.05);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(233, 195, 73, 0.1);
+        }
+        .gilded-edge {
+            border: 1px solid rgba(233, 195, 73, 0.3);
+        }
+        .shimmer {
+            position: relative;
+            overflow: hidden;
+        }
+        .shimmer::after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(233, 195, 73, 0.1), transparent);
+            transform: rotate(45deg);
+            animation: shimmer-effect 6s infinite;
+        }
+        @keyframes shimmer-effect {
+            0% { transform: translateX(-100%) rotate(45deg); }
+            20% { transform: translateX(100%) rotate(45deg); }
+            100% { transform: translateX(100%) rotate(45deg); }
+        }
+        .gallery-item:hover .glow-effect {
+            box-shadow: 0 0 25px rgba(206, 192, 231, 0.4);
+        }
+        body {
+            background-color: #131410;
+            color: #e5e2dc;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-tertiary-fixed-variant": "#4c4162",
+                        "on-primary-container": "#9783bd",
+                        "secondary-container": "#af8d11",
+                        "outline": "#948e99",
+                        "surface-container-highest": "#353531",
+                        "secondary-fixed-dim": "#e9c349",
+                        "error": "#ffb4ab",
+                        "on-secondary-container": "#342800",
+                        "on-primary-fixed-variant": "#4f3d72",
+                        "on-error": "#690005",
+                        "on-background": "#e5e2dc",
+                        "inverse-primary": "#68558b",
+                        "on-secondary": "#3c2f00",
+                        "on-surface-variant": "#cbc4d0",
+                        "surface": "#131410",
+                        "primary": "#d2bcfa",
+                        "surface-tint": "#d2bcfa",
+                        "on-secondary-fixed-variant": "#574500",
+                        "background": "#131410",
+                        "tertiary-container": "#2a203e",
+                        "on-tertiary": "#352b4a",
+                        "primary-container": "#2d1b4e",
+                        "error-container": "#93000a",
+                        "tertiary-fixed-dim": "#cec0e7",
+                        "primary-fixed": "#ebddff",
+                        "outline-variant": "#49454e",
+                        "surface-variant": "#353531",
+                        "on-error-container": "#ffdad6",
+                        "surface-container": "#20201c",
+                        "on-tertiary-fixed": "#201634",
+                        "surface-container-lowest": "#0e0e0b",
+                        "on-surface": "#e5e2dc",
+                        "on-tertiary-container": "#9387ab",
+                        "secondary": "#e9c349",
+                        "tertiary": "#cec0e7",
+                        "on-primary-fixed": "#231043",
+                        "surface-bright": "#3a3935",
+                        "surface-container-high": "#2a2a26",
+                        "tertiary-fixed": "#eaddff",
+                        "inverse-surface": "#e5e2dc",
+                        "inverse-on-surface": "#31312d",
+                        "on-primary": "#38265a",
+                        "on-secondary-fixed": "#241a00",
+                        "secondary-fixed": "#ffe088",
+                        "surface-dim": "#131410",
+                        "surface-container-low": "#1c1c18",
+                        "primary-fixed-dim": "#d2bcfa"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "margin-mobile": "16px",
+                        "margin-desktop": "40px",
+                        "unit": "8px",
+                        "container-max": "1200px"
+                    },
+                    "fontFamily": {
+                        "body-md": ["Plus Jakarta Sans"],
+                        "headline-sm": ["Literata"],
+                        "headline-md": ["Literata"],
+                        "body-lg": ["Plus Jakarta Sans"],
+                        "display-lg-mobile": ["Literata"],
+                        "label-md": ["Plus Jakarta Sans"],
+                        "display-lg": ["Literata"],
+                        "caption": ["Plus Jakarta Sans"]
+                    },
+                    "fontSize": {
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "display-lg-mobile": ["36px", {"lineHeight": "44px", "fontWeight": "700"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                },
+            },
+        }
+    </script>
+</head>
+<body class="font-body-md text-on-surface selection:bg-secondary/30">
+<!-- TopNavBar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-secondary/20 shadow-[0_0_15px_rgba(233,195,73,0.1)]">
+<nav class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="flex items-center h-12"><img src="https://lh3.googleusercontent.com/aida-public/AB6AXuANaU3yB_Z8geT6VqfbnboTreGnRV3zFybc3uXxaeUdNMZ_gFFdxWauN-qNQdtmCwstRauzZO7LDrBvNO1VbKrZlp1rtSPcu90oF-Uji9B_GzocthENLDNb8hx3I_8WlARftql9wwzWigRpyDSgwcFWnYk3DOFjQgl88cTJcp1ENS3Iy374MaZR013lu8CmoQaXl3Yj5DaBelRP07RVCXTTx_67HgTdxeKzBrA7dFIneAAZ1lj8NbdVuMfHPJONOGk5tNeqeknyJNI" alt="Lorrie's Enchanted Arts Logo" class="h-full w-auto object-contain"></div>
+<div class="hidden md:flex items-center space-x-8">
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Home</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">About Us</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Characters</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-secondary dark:text-secondary-fixed border-b-2 border-secondary pb-1" href="#">Gallery</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Art Showcase</a>
+<a class="font-label-md text-label-md uppercase tracking-wider text-on-surface-variant dark:text-on-surface hover:text-secondary transition-colors" href="#">Contact</a>
+</div>
+<button class="shimmer bg-secondary text-on-secondary px-6 py-2 rounded-full font-label-md text-label-md uppercase tracking-widest hover:scale-105 transition-transform duration-200">
+                Magical Inquiry
+            </button>
+</nav>
+</header>
+<main class="pt-32 pb-24 relative overflow-hidden">
+<!-- Background Atmospheric Element -->
+
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<!-- Header Section -->
+<div class="mb-16 text-center">
+<h1 class="font-display-lg text-display-lg text-secondary mb-4">Capturing the Magic</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto">
+                    Explore our gallery of professional character entertainment, where storytelling comes to life through exquisite artistry and dedicated performance.
+                </p>
+</div>
+<!-- Category Filter (Simplified visual selection) -->
+<div class="flex flex-wrap justify-center gap-4 mb-12">
+<button class="px-6 py-2 rounded-full glass-panel text-secondary border border-secondary/40 font-label-md text-label-md uppercase tracking-wider">All Moments</button>
+<button class="px-6 py-2 rounded-full glass-panel text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md uppercase tracking-wider">Holiday Magic</button>
+<button class="px-6 py-2 rounded-full glass-panel text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md uppercase tracking-wider">Royal Balls</button>
+<button class="px-6 py-2 rounded-full glass-panel text-on-surface-variant hover:text-secondary transition-colors font-label-md text-label-md uppercase tracking-wider">Superhero Training</button>
+</div>
+<!-- Masonry-style Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Section: Holiday Magic -->
+<div class="md:col-span-12 mb-4 mt-8">
+<h2 class="font-headline-md text-headline-md text-secondary-fixed flex items-center gap-3">
+<span class="material-symbols-outlined">ac_unit</span>
+                        Holiday Magic
+                    </h2>
+</div>
+<div class="md:col-span-7 h-[500px] relative group overflow-hidden rounded-xl gallery-item glow-effect transition-all duration-300 duration-700 opacity-100 translate-y-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A magical scene of a high-quality Santa Claus and Mrs. Claus sitting by a stone fireplace in a luxurious holiday-themed room. The lighting is warm and amber, highlighting the rich textures of the velvet suits and white fur trim. The style is professional and whimsical, capturing a candid moment of joy and storytelling. Deep midnight purple shadows and ethereal gold highlights dominate the color palette." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAdaTaSF-YDtjACEX8zr9_yWbx1Jz7loX_Cyw5Hzgk_u0FNgImXITcnxaI1C2ruVNdJqzQq7Ust3PDjjqINk1FB5ZrFuJHz7DHzCB-CPbNyBb6i91ubUD5NSXIrkFFcV5cubgJRitqwcmP5omxhMF6NcWAb3JhRX9pcAp0u3i2RiyfizLmbJXW8CB_hOWQe8GHAXgMO4L6ItOxH47Pukf72ej-I6yWoDLMOCwxhL7NXTro15jgDwSB2dJusLmCZbvaoxinjp16kDyc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="font-headline-sm text-headline-sm text-secondary">A Hearthside Story</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Private Residence • 2023</span>
+</div>
+<div class="absolute inset-0 pointer-events-none gilded-edge rounded-xl"></div>
+</div>
+<div class="md:col-span-5 h-[500px] relative group overflow-hidden rounded-xl gallery-item glow-effect transition-all duration-300 duration-700 opacity-100 translate-y-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A close-up portrait of a professional Mrs. Claus with intricate costume detailing, including lace collars and a delicate golden spectacles. She is holding a plate of perfectly decorated holiday cookies. The background is softly blurred with bokeh lights resembling floating dust motes or magical glows. The overall aesthetic is professional magic, using antiqued cream and midnight purple tones." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDEOdm6ju9OQs2ZZyGoP81HflrJvoR4Th67ZNfpGVpvt8FvOlbRnZpF4qKCpFtSV2jEi2iYRQof6Rm67CnUqXS1LljzAwZTVAm-L6GQLpMDRTanfygaMH9-ip3G7G_CBWNTgyDQ6E1RWJfiITvyHtLo8ngCxCHg6TkWsDhJ259s0Xxz-uSEvkQglhrgPZFgYnKcE3ULIrIb0veYt4-ylHKcRlsyL3GSmrVRD53qtqyKePMHgYDgk2fA6ooofUN1iDuFVuC75fy1bcQ')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="font-headline-sm text-headline-sm text-secondary">Mrs. Claus' Kitchen</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Corporate Gala</span>
+</div>
+<div class="absolute inset-0 pointer-events-none gilded-edge rounded-xl"></div>
+</div>
+<!-- Section: Royal Balls -->
+<div class="md:col-span-12 mb-4 mt-12">
+<h2 class="font-headline-md text-headline-md text-secondary-fixed flex items-center gap-3">
+<span class="material-symbols-outlined">auto_awesome</span>
+                        Royal Balls
+                    </h2>
+</div>
+<div class="md:col-span-4 h-[600px] relative group overflow-hidden rounded-xl gallery-item glow-effect transition-all duration-300 duration-700 opacity-100 translate-y-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A professional princess performer in a magnificent lavender ballgown with layers of silk and tulle, standing in a grand ballroom with marble floors. The lighting is soft and ethereal, suggesting a high-end luxury event. Subtle gold accents in the dress embroidery catch the light. The shot is vertical, emphasizing the grandeur of the costume and the setting." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDc4crbv2r_qNjZ59yGrMq99TzvIqjk2yKzU2e6x3SIutMaPi-QJfOQeuA-xXAO3JNy3vBLFc6ObUHj5JezFg8KAZuA9h4dAvIj0T0rrcuSJoA7DWcoLWo5IE2J_vswnQe2Wy9heGWULvaxUP58-0m4rhiwSGM8WSbn3_ohKUc7ywOpmG8EfLvgCHDBHx7eu4pmNVswTNNVmCXH4aZExAN4ni3kNyTnRC0sH5vijVh_0A5QEihI7FUw7SJnKCH82_xdxK9d1suqlk0')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="font-headline-sm text-headline-sm text-secondary">The Lavender Sovereign</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Spring Coronation</span>
+</div>
+<div class="absolute inset-0 pointer-events-none gilded-edge rounded-xl"></div>
+</div>
+<div class="md:col-span-8 grid grid-rows-2 gap-gutter">
+<div class="relative group overflow-hidden rounded-xl gallery-item glow-effect transition-all duration-300 duration-700 opacity-100 translate-y-0">
+<div class="w-full h-full min-h-[288px] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A wide cinematic shot of several royal characters interacting with children at a beautifully set tea party. The setting is a lush garden with golden hour light filtering through the trees. The atmosphere is one of whimsical wonder, with professional character performers fully engaged in their roles. The color palette emphasizes rich greens, deep purples, and ethereal golds." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuAGR5WKFSQUsXC4bl3rGnYnt4JTEe1ngZ3KGEgY8pJHbwBgvHSg0uaqN-BfCPiCCTyLs42uqSBAOQuq1PsSvHQjUq-TcK_JsqwUEr2ICkxAVD-i5YYGffleUSQGffIpPwyQ-8qfYeR43Ibvwsb3KPUKY7E9mGX_etTkjjnnZWkYUJpbXm14CMtI7pi_YRebV_lFg4LLyNLDI8dWRnkVxG5E_WAr3oBh3E935FO7qjbeUe_7QzdbxDLzn32wTRcTj2xenZv6NSlgklY')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="font-headline-sm text-headline-sm text-secondary">Enchanted Tea Garden</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Community Festival</span>
+</div>
+<div class="absolute inset-0 pointer-events-none gilded-edge rounded-xl"></div>
+</div>
+<div class="grid grid-cols-2 gap-gutter">
+<div class="relative group overflow-hidden rounded-xl gallery-item glow-effect transition-all duration-300 duration-700 opacity-100 translate-y-0">
+<div class="w-full h-full min-h-[288px] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A high-quality image of glass slippers resting on a velvet cushion with a soft glow emanating from within. The background is a dark, midnight purple with floating dust motes and sparkling effects. This is a detail shot showcasing the artistic prop quality used by Lorrie's Enchanted Arts. The lighting is focused and dramatic, highlighting the crystalline textures." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuC7Y2GwK2v9Zi67nKEvOFLrJg3nB-Y2jtBdoXR7HT7brT_YE7ek7DKJjE-NLAhjh48o9UToGuLBGVFaHC4BJ9tbZZNW1BAm1ljUV9_UTjIzZLYLmfD3KTGwari_aF8zX1PgpCGhmrhbi77EteLoZhCYc5jVu12YAzBcdPsd6QMKqmX-WRY9INcc8nsyjvuWSddSd7rlo9jI_rMzR9OsH4ngcXVKlbcfUeHnXqVAYw_bhskUlexkyAlT9oPcWy8wXfwSQbdEVi6cUeY')"></div>
+<div class="absolute inset-0 pointer-events-none gilded-edge rounded-xl"></div>
+</div>
+<div class="relative group overflow-hidden rounded-xl gallery-item glow-effect transition-all duration-300 duration-700 opacity-100 translate-y-0">
+<div class="w-full h-full min-h-[288px] bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A professional performer dressed as a classic princess reading a large, leather-bound storybook to a group of captivated children. The lighting is warm and focused on the book, creating a magical aura around the scene. The image captures the essence of professional storytelling and high-end character entertainment in a dark mode aesthetic." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCu15-iNY7UUBasQX7eD3vzdeePGxv9SRSssvGalRWU7pFjeU7D--WByXFJFu9tUhr6p60Xt1d85DAqXO596nyqVqTFczEtfIO6943MU7kcJjbPI9OGvADZTz8VUDx9PJmDy78sBg4OJJ0ZQ6-wJnpWh2uIEppnRdcJM8mZwIVB_ANgMPHve2xOUMS0iWt0IIVcu7wTXM4eWUCcJLEfAlSnbT5zFd3wfXe4CWQlwbbPdkSDJU00WAITTpCzdgoZjq0NyBzwxZHyzKg')"></div>
+<div class="absolute inset-0 pointer-events-none gilded-edge rounded-xl"></div>
+</div>
+</div>
+</div>
+<!-- Section: Superhero Training -->
+<div class="md:col-span-12 mb-4 mt-12">
+<h2 class="font-headline-md text-headline-md text-secondary-fixed flex items-center gap-3">
+<span class="material-symbols-outlined">bolt</span>
+                        Superhero Training
+                    </h2>
+</div>
+<div class="md:col-span-6 h-[400px] relative group overflow-hidden rounded-xl gallery-item glow-effect transition-all duration-300 duration-700 opacity-100 translate-y-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="An action shot of a professional superhero character performer teaching a group of children a dynamic pose. The character's costume is high-end, featuring metallic textures and cinematic lighting. The setting is a modern urban rooftop at twilight, with city lights blurred in the background. The mood is heroic and inspiring, with a color palette of deep blues and vibrant gold accents." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuCQwbzjbB_VUMkPihuNW6yNybHQv00LDZTotmAYw1fSjCDcGSJsBGkGno9NmTqMujD7Xb6Zf_dQpKv9v_iSo2sux8dsz-HvWnQ-sCmn9mXTu4zWjmluCGoLCmVPTo26VbCVRdosXHxi8cB9LYfDVU7yKgKXGZE_kOuqzOgENDdMTsZ16ZgiWk0Mx1krWICWqPxcmZ9W0j18scWepxLPRLmy-Y5bp83gsuBSsON_SG0CtnAaKZO2aTCKqkobtRZkLhB0Pe8iKMal2Uc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="font-headline-sm text-headline-sm text-secondary">Rooftop Training Academy</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Public Event</span>
+</div>
+<div class="absolute inset-0 pointer-events-none gilded-edge rounded-xl"></div>
+</div>
+<div class="md:col-span-6 h-[400px] relative group overflow-hidden rounded-xl gallery-item glow-effect transition-all duration-300 duration-700 opacity-100 translate-y-0">
+<div class="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110" data-alt="A portrait of a powerful heroic character standing confidently in a dramatic lighting setup. The costume is meticulously crafted with high-quality fabrics and armor-like components. Smoke or light mist swirls around the character's feet, lit by a lavender glow. The style is professional and authoritative, consistent with high-end character arts entertainment." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuChYxKz1SAkjsPWm2Ta6OmCaX9T8myj4jreCjnNklaIAR3piS52IFL1SC2BplnPhTxGeU0Zr-0fZ7aKuOhpinwu3FoBetBMgZZRzo2MtfDpK6ndbSFWTrtAljbuDj0EGUOxE_OOKyU3Il_Vh9TNxNr3jRh7AhDBsrgwHvw40U2bfHU4Zzr5LKVxT2SBuMhylRqaDrBbDX-OlLEJPw6sOJMc6Y9HlAJXd4iCopZd8i9fRd-W19qdVY-F_Af1ThOygHd_d-frgicWycc')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
+<span class="font-headline-sm text-headline-sm text-secondary">The Protector's Gaze</span>
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Heroic Portraits</span>
+</div>
+<div class="absolute inset-0 pointer-events-none gilded-edge rounded-xl"></div>
+</div>
+</div>
+<!-- Call to Action Section -->
+<div class="mt-24 py-16 px-8 rounded-2xl glass-panel relative overflow-hidden text-center border border-secondary/20">
+<div class="relative z-10">
+<h3 class="font-headline-md text-headline-md text-secondary mb-6 italic">Ready to create your own magical moment?</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10 max-w-xl mx-auto">
+                        Whether it's a royal ball, a holiday surprise, or hero training, we bring professional artistry to every encounter.
+                    </p>
+<div class="flex flex-col sm:flex-row justify-center gap-6">
+<button class="bg-secondary text-on-secondary px-10 py-4 rounded-full font-label-md text-label-md uppercase tracking-widest shadow-lg hover:scale-105 transition-transform duration-300">
+                            Book an Event
+                        </button>
+<button class="border border-tertiary text-tertiary px-10 py-4 rounded-full font-label-md text-label-md uppercase tracking-widest hover:bg-tertiary/10 transition-colors">
+                            View Art Showcase
+                        </button>
+</div>
+</div>
+<!-- Shimmer Overlay for the Card -->
+<div class="shimmer absolute inset-0 opacity-20 pointer-events-none"></div>
+</div>
+</div>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-lowest dark:bg-surface-container-lowest border-t border-secondary/10">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-desktop py-12 max-w-container-max mx-auto">
+<div>
+<div class="font-headline-sm text-headline-sm text-secondary mb-6">Lorrie's Enchanted Arts</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">
+                    Elevating events through professional character performance and high-end visual artistry.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-2">Connect With Us</h4>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-all" href="#">Facebook</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-all" href="#">Instagram</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-all" href="#">YouTube</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-md text-label-md text-secondary uppercase tracking-widest mb-2">Policies</h4>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-all" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-secondary hover:underline decoration-secondary/50 transition-all" href="#">Terms of Service</a>
+</div>
+</div>
+<div class="px-margin-desktop py-6 border-t border-secondary/5 text-center">
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                © 2024 Lorrie's Character Entertainment. All performers are fully vetted and background-checked for your family's safety.
+            </p>
+</div>
+</footer>
+<script>
+        // Micro-interaction for gallery items
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.addEventListener('mouseenter', () => {
+                const glow = item.querySelector('.glow-effect');
+                if (glow) glow.style.boxShadow = '0 0 40px rgba(233, 195, 73, 0.2)';
+            });
+            item.addEventListener('mouseleave', () => {
+                const glow = item.querySelector('.glow-effect');
+                if (glow) glow.style.boxShadow = 'none';
+            });
+        });
+
+        // Simple entrance animation for grid items
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-8');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.gallery-item').forEach(item => {
+            item.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-8');
+            observer.observe(item);
+        });
+    </script>
+
+
+</body></html>
