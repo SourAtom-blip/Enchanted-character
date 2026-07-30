@@ -6,6 +6,8 @@ const CROPS = [
   { match: 'AB6AXuAdaTaSF-YDtjACEX8zr9_yWbx1Jz7loX_Cyw5Hzgk_u0FNgImXITcnxaI1C2ruVNdJqzQq7', size: '160% 160%' }, // A Hearthside Story (top + bottom caption bars)
   { match: 'AB6AXuDVazThhLBMAm1qjINj1HtFCF-JDvLVRKj8Zpg9YoYaeaKTB6JIAzYqv5eQCzySqAomhZ', size: '220% 220%' }, // Lavender Dreams (caption bars + left edge strip)
   { match: 'AB6AXuCDExoZrRITq8YhcTL0yYYpT7TKHyz3wABAEGmBKzEzROYRlm_j4fOu_ycPEBafHeux', size: '220% 220%' }, // Celestial Citadel (caption bars + left edge strip)
+  { match: 'AB6AXuAxCPNOpmmyX_9G168vrhsCgWHU-JmqWZU9JLD7G1E5EA66X7GzE-pRU8YKDnm5v_h', size: '160% 160%' }, // Abyssal Serenade (top caption bar)
+  { match: 'AB6AXuD5CCW0xZVQquXf04zb26Gbj-cIl0yqbqc2DKviVCweMpAPtZ7t-U7-TWneENLJFxi', size: '160% 160%' }, // Grand Atelier Venue (top caption bar)
 ];
 
 export function getImageStyle(imageUrl) {

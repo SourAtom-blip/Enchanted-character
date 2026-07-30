@@ -178,7 +178,7 @@ export default function Events() {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop grid grid-cols-1 md:grid-cols-2 gap-16 items-center relative z-10">
           <div className="order-2 md:order-1">
             <div className="rounded-2xl overflow-hidden gilded-edge aspect-[4/5] relative">
-              <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url("${VENUE_IMAGE}")` }} />
+              <div className="absolute inset-0 bg-cover bg-center" style={getImageStyle(VENUE_IMAGE)} />
               <div className="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60" />
               <div className="absolute bottom-8 left-8">
                 <span className="font-label-md text-secondary uppercase tracking-widest">Coming Soon</span>
