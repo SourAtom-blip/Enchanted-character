@@ -1,27 +1,23 @@
 const PERFORMERS = [
-  { name: 'Lorrie', tag: 'Owner & Performer', image: '/top-performers/1.jpg', size: '150% 150%', position: 'center 80%' },
+  { name: 'Lorrie', tag: 'Owner & Performer', image: '/top-performers/1.png' },
   { name: 'Performer', tag: '', image: '/top-performers/2.jpg' },
   { name: 'Performer', tag: '', image: '/top-performers/4.jpg' },
-  { name: 'Moana', tag: '', image: '/top-performers/5.jpg', size: '160% 160%', position: 'right 20%' },
-  { name: 'Jose', tag: '', image: '/top-performers/6.jpg', size: '150% 150%', position: 'right 75%' },
-  { name: 'Ameri', tag: '', image: '/top-performers/7.jpg', size: '150% 150%', position: 'left 75%' },
-  { name: 'Addison', tag: '', image: '/top-performers/8.jpg', size: '155% 155%', position: 'left 75%' },
-  { name: 'Ryley', tag: '', image: '/top-performers/9.jpg', size: '150% 150%', position: 'left 75%' },
-  { name: 'Abbie', tag: '', image: '/top-performers/10.jpg', size: '155% 155%', position: 'right 75%' },
-  { name: 'Sonya', tag: '', image: '/top-performers/11.jpg', size: '150% 150%', position: 'center 75%' },
-  { name: 'Mia', tag: '', image: '/top-performers/unnamed.jpg', size: '160% 160%', position: 'left 75%' },
+  { name: 'Moana', tag: '', image: '/top-performers/3.png' },
+  { name: 'Jose', tag: '', image: '/top-performers/6.png' },
+  { name: 'Ameri', tag: '', image: '/top-performers/7.png' },
+  { name: 'Addison', tag: '', image: '/top-performers/8.png' },
+  { name: 'Ryley', tag: '', image: '/top-performers/9.png' },
+  { name: 'Abbie', tag: '', image: '/top-performers/10.png' },
+  { name: 'Sonya', tag: '', image: '/top-performers/11.png' },
+  { name: 'Mia', tag: '', image: '/top-performers/unnamed-mia.png' },
 ];
 
 function PerformerCard({ performer }) {
   return (
     <div className="vellum-card gilded-edge rounded-xl overflow-hidden group relative aspect-[3/4] transition-transform duration-500 hover:scale-[1.02]">
       <div
-        className="w-full h-full bg-cover transition-transform duration-700 group-hover:scale-110"
-        style={{
-          backgroundImage: `url("${performer.image}")`,
-          backgroundSize: performer.size || 'cover',
-          backgroundPosition: performer.position || 'center',
-        }}
+        className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+        style={{ backgroundImage: `url("${performer.image}")` }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-5">
