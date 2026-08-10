@@ -9,6 +9,7 @@ const LINKS = [
   { to: '/gallery', label: 'Gallery' },
   { to: '/art-showcase', label: 'Art Showcase' },
   { to: '/events', label: 'Events' },
+  { to: '/top-performers', label: 'Top Performers' },
   { to: '/contact', label: 'Contact' },
 ];
 
@@ -19,17 +20,17 @@ export default function Navbar() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-surface/80 backdrop-blur-xl border-b border-secondary/20 shadow-[0_0_15px_rgba(233,195,73,0.1)]">
       <nav className="flex flex-nowrap justify-between items-center gap-4 px-margin-mobile md:px-margin-desktop py-4 max-w-container-max mx-auto">
         <NavLink to="/" className="flex items-center h-12 w-auto overflow-hidden shrink-0">
-          <span className="font-headline-sm text-headline-sm text-secondary italic whitespace-nowrap">Lorrie's Enchanted Arts</span>
+          <span className="font-headline-sm text-[20px] leading-none text-secondary italic whitespace-nowrap">Lorrie's Enchanted Arts</span>
         </NavLink>
 
-        <ul className="hidden xl:flex items-center gap-5 xl:gap-7 shrink-0">
+        <ul className="hidden xl:flex items-center gap-3 2xl:gap-5 shrink-0">
           {LINKS.map((link) => (
             <li key={link.to} className="whitespace-nowrap">
               <NavLink
                 to={link.to}
                 end={link.to === '/'}
                 className={({ isActive }) =>
-                  `font-label-md text-label-md uppercase tracking-wider transition-colors pb-1 ${
+                  `font-label-md text-[12px] 2xl:text-label-md uppercase tracking-wide transition-colors pb-1 ${
                     isActive ? 'text-secondary border-b-2 border-secondary' : 'text-on-surface-variant hover:text-secondary'
                   }`
                 }
@@ -41,7 +42,7 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden xl:block shrink-0">
-          <ShimmerButton as="link" to="/contact" className="!px-6 !py-2 whitespace-nowrap">
+          <ShimmerButton as="link" to="/contact" className="!px-4 !py-2 !text-[12px] 2xl:!text-label-md whitespace-nowrap">
             Magical Inquiry
           </ShimmerButton>
         </div>
