@@ -1,23 +1,27 @@
 const PERFORMERS = [
-  { name: 'Lorrie', tag: 'Owner & Performer', image: '/top-performers/1.jpg' },
+  { name: 'Lorrie', tag: 'Owner & Performer', image: '/top-performers/1.jpg', size: '150% 150%', position: 'center 80%' },
   { name: 'Performer', tag: '', image: '/top-performers/2.jpg' },
   { name: 'Performer', tag: '', image: '/top-performers/4.jpg' },
-  { name: 'Moana', tag: '', image: '/top-performers/5.jpg' },
-  { name: 'Jose', tag: '', image: '/top-performers/6.jpg' },
-  { name: 'Ameri', tag: '', image: '/top-performers/7.jpg' },
-  { name: 'Addison', tag: '', image: '/top-performers/8.jpg' },
-  { name: 'Ryley', tag: '', image: '/top-performers/9.jpg' },
-  { name: 'Abbie', tag: '', image: '/top-performers/10.jpg' },
-  { name: 'Sonya', tag: '', image: '/top-performers/11.jpg' },
-  { name: 'Mia', tag: '', image: '/top-performers/unnamed.jpg' },
+  { name: 'Moana', tag: '', image: '/top-performers/5.jpg', size: '160% 160%', position: 'right 20%' },
+  { name: 'Jose', tag: '', image: '/top-performers/6.jpg', size: '150% 150%', position: 'right 75%' },
+  { name: 'Ameri', tag: '', image: '/top-performers/7.jpg', size: '150% 150%', position: 'left 75%' },
+  { name: 'Addison', tag: '', image: '/top-performers/8.jpg', size: '155% 155%', position: 'left 75%' },
+  { name: 'Ryley', tag: '', image: '/top-performers/9.jpg', size: '150% 150%', position: 'left 75%' },
+  { name: 'Abbie', tag: '', image: '/top-performers/10.jpg', size: '155% 155%', position: 'right 75%' },
+  { name: 'Sonya', tag: '', image: '/top-performers/11.jpg', size: '150% 150%', position: 'center 75%' },
+  { name: 'Mia', tag: '', image: '/top-performers/unnamed.jpg', size: '160% 160%', position: 'left 75%' },
 ];
 
 function PerformerCard({ performer }) {
   return (
     <div className="vellum-card gilded-edge rounded-xl overflow-hidden group relative aspect-[3/4] transition-transform duration-500 hover:scale-[1.02]">
       <div
-        className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
-        style={{ backgroundImage: `url("${performer.image}")` }}
+        className="w-full h-full bg-cover transition-transform duration-700 group-hover:scale-110"
+        style={{
+          backgroundImage: `url("${performer.image}")`,
+          backgroundSize: performer.size || 'cover',
+          backgroundPosition: performer.position || 'center',
+        }}
       />
       <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-background/10 to-transparent" />
       <div className="absolute bottom-0 left-0 right-0 p-5">
