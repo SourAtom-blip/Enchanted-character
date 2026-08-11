@@ -29,27 +29,31 @@ async function seed() {
   if (charCount === 0) {
     await Character.insertMany([
       {
-        name: 'The Lavender Queen',
-        tag: 'Princess',
-        imageUrl: img('AB6AXuB3QkvGksj8xx7QPHXiSg5LDupuVkgDhqNUiH_bitzejf2ss9ozjDOr4zndcZO4mus-vd9FYFjqri1lN9irkcPl7U1zSVNJSOmm4bjj7vDlTYho3gaM08hh-EHaa0d_-sgcR0TwRJ9AucVzefWc21DE0VG8SkUIXrKmP9g377z8rw0_ILFKMlFHaQYwXYi_Si4gOuCt5YXobqdBUG7p4DGM3aFjhYS5Fckon7ygjyPqtUp91MFdg1B__EyEVjRajBjlvza6aGbnNGk'),
+        name: 'Elsa',
+        tag: 'Ice Queen',
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786481513/enchanted-arts/d8awjhq9gyjmdses2xqd.jpg',
+        description: 'Our Snow Queen brings frosty elegance and Arendelle magic to every royal celebration.',
         order: 0,
       },
       {
-        name: 'Golden Guard',
+        name: 'Batman',
         tag: 'Hero',
-        imageUrl: img('AB6AXuCG4Kr826AuxzqWV2b1dvjAFUed5fxiLmTL3gLOQh1gSH1Pve1f7VGandql6VF7bgu3pi2PIfEY2XY4WspgWba-BuGhAcQnRDftEHOS8nqCY2UonxijhuvP1deOsjOPxNcxdHyRuJPNcuUOWoJEYhwxH_CyNyo0ED_dmdmoLaI-mO2GxTH0meGpImSlLf8qEsUWjnk7jpX58JZoAO1Wlm3bN6_RYUqLi5i7Pzj9Clx7piwLFIWJZ1kdrPfM1UZnCpJWr_vgbB_8iho'),
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786481970/enchanted-arts/cglf1dfc2admmpkw94qt.png',
+        description: 'The Caped Crusader arrives to train young heroes and pose for action-packed photos.',
         order: 1,
       },
       {
-        name: 'Autumn Sylph',
-        tag: 'Ethereal',
-        imageUrl: img('AB6AXuAIYuvQljMmvNj0e5cmo8wmF3jWtgsfQhV6MBxXnvPF3rZUWfp4ZUgCqskD5NhRWFnayV542T1hDg6j1HM9N_LDKa_mc4Vii7Zf2XlhC_c1aQKomIKfyO8u4bUH0bsqrLKovpU_Ks7GAyNTikcFVHDDPxhn5etiDOWxp3pgBpPj1Y3IxTWv1WiVYxC81yJifFJwkQ2HgVwOzBxBFf0_5a6AiZWRcFallhpwbAC8objnIEtmOXbrkvUUtmfkg3clzvudOKE9jPZxZ-k'),
+        name: 'Belle',
+        tag: 'Princess',
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786481521/enchanted-arts/crnmjfj0nu31ocsihqc4.png',
+        description: 'A bookish beauty who loves storytime, singalongs, and getting lost in a good tale.',
         order: 2,
       },
       {
-        name: 'Star Voyager',
+        name: 'Moana',
         tag: 'Explorer',
-        imageUrl: img('AB6AXuCE-X5CYM117hsP4zyfVdO0-cC3Yp-h9ZtlN4y3UaXkULhp7IZkVyYpOupShpIAFT7jFvYH1Z2wuxJZFuJuBNkSHk_uAfKdVsDq7xxv1M2ZlZOSx2iQ_1kXJeS4K1yNOFu6skvZY968PQB_KW-_Wnso1vn_BzWmutRLYI0xY2l4fceBmODFzwMrz87Ku5ybFoMcsXFFlKZJ8L1KX2_pEtNquId7m4CT5UjZ2STRPeKl8zq-Tf0PGzWJxnlnVs0uDqg-zqmoTEt6o00'),
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786481526/enchanted-arts/ymndpuapwjkl0l9txun1.png',
+        description: 'A wayfinder with a heart of the ocean, ready for songs, stories, and island adventure.',
         order: 3,
       },
     ]);

@@ -8,17 +8,28 @@ const CROPS = [
   { match: 'AB6AXuCDExoZrRITq8YhcTL0yYYpT7TKHyz3wABAEGmBKzEzROYRlm_j4fOu_ycPEBafHeux', size: '220% 220%' }, // Celestial Citadel (caption bars + left edge strip)
   { match: 'AB6AXuAxCPNOpmmyX_9G168vrhsCgWHU-JmqWZU9JLD7G1E5EA66X7GzE-pRU8YKDnm5v_h', size: '160% 160%' }, // Abyssal Serenade (top caption bar)
   { match: 'AB6AXuD5CCW0xZVQquXf04zb26Gbj-cIl0yqbqc2DKviVCweMpAPtZ7t-U7-TWneENLJFxi', size: '160% 160%' }, // Grand Atelier Venue (top caption bar)
+  { match: 'd8awjhq9gyjmdses2xqd', size: '190% 190%', position: 'left center' }, // Elsa (isolate from duo photo)
+  { match: 'cglf1dfc2admmpkw94qt', size: '180% 180%', position: 'left top' }, // Batman (isolate from duo photo)
 ];
+
+// Cloudinary-hosted images are uploaded at full resolution; inject an
+// auto quality/format transformation so they're served compressed
+// (this also covers images uploaded before optimized upload settings existed).
+function optimizeUrl(imageUrl) {
+  if (!imageUrl.includes('res.cloudinary.com') || imageUrl.includes('/upload/q_auto')) return imageUrl;
+  return imageUrl.replace('/upload/', '/upload/q_auto,f_auto/');
+}
 
 export function getImageStyle(imageUrl) {
   if (!imageUrl) return {};
+  const optimized = optimizeUrl(imageUrl);
   const crop = CROPS.find((c) => imageUrl.includes(c.match));
   if (!crop) {
-    return { backgroundImage: `url("${imageUrl}")` };
+    return { backgroundImage: `url("${optimized}")` };
   }
   return {
-    backgroundImage: `url("${imageUrl}")`,
+    backgroundImage: `url("${optimized}")`,
     backgroundSize: crop.size,
-    backgroundPosition: 'center center',
+    backgroundPosition: crop.position || 'center center',
   };
 }

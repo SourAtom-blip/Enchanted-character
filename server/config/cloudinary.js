@@ -13,7 +13,7 @@ const storage = new CloudinaryStorage({
   params: {
     folder: 'enchanted-arts',
     allowed_formats: ['jpg', 'jpeg', 'png', 'webp'],
-    transformation: [{ width: 1600, crop: 'limit' }],
+    transformation: [{ width: 1600, crop: 'limit', quality: 'auto', fetch_format: 'auto' }],
   },
 });
 

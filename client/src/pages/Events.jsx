@@ -8,6 +8,38 @@ import { getImageStyle } from '../utils/imageCrop.js';
 const VENUE_IMAGE =
   'https://lh3.googleusercontent.com/aida-public/AB6AXuD5CCW0xZVQquXf04zb26Gbj-cIl0yqbqc2DKviVCweMpAPtZ7t-U7-TWneENLJFxiVwxMIF4_jJcDjdzXiHHdA7xomdT3pLTEFzp4ssCG83VGuEoUTRjPEWULziz88G9mrTJu7xhH19RRZhrmV0lM3b4JWqPpKrttCUQ91p471fJOOfu09LbaeoUq30zq_X1Ryb1vYlAPLxKK_EynuBVJV0OIsi-JdQCaCA43l8NyGdaG0f0aiXg48SzO5hxFrXuuxt4b6auzUkps';
 
+const PAST_EVENTS = [
+  { src: '/past-events/10.jpeg', caption: 'A royal reunion — Cinderella, Moana, Elsa & Belle' },
+  { src: '/past-events/9.jpg', caption: 'Elsa with our owner, Lorrie' },
+  { src: '/past-events/2.png', caption: 'Storytime & crafts with Moana' },
+  { src: '/past-events/3.png', caption: 'Elsa & Belle read a story together' },
+  { src: '/past-events/4.png', caption: 'Belle takes the mic for storytime' },
+  { src: '/past-events/16.png', caption: 'Batman meets Moana' },
+  { src: '/past-events/6.jpeg', caption: 'Bubble party fun with Belle & Moana' },
+  { src: '/past-events/7.jpeg', caption: 'Belle & Moana lighting up the night' },
+  { src: '/past-events/8.jpg', caption: 'Moana takes the mic' },
+  { src: '/past-events/11.jpeg', caption: 'Elsa & Belle, story time' },
+  { src: '/past-events/12.jpeg', caption: 'Moana & Cinderella coloring together' },
+  { src: '/past-events/13.jpeg', caption: 'Elsa greets a young guest' },
+  { src: '/past-events/14.jpeg', caption: 'Belle at a backyard celebration' },
+  { src: '/past-events/15.jpeg', caption: 'A magical family portrait' },
+];
+
+function PastEventPhoto({ photo }) {
+  const ref = useScrollReveal();
+  return (
+    <div ref={ref} className="reveal vellum-card gilded-edge rounded-xl overflow-hidden group relative aspect-[3/4] mb-gutter break-inside-avoid">
+      <div
+        className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+        style={{ backgroundImage: `url("${photo.src}")` }}
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-background/90 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5">
+        <span className="font-label-md text-label-md text-secondary">{photo.caption}</span>
+      </div>
+    </div>
+  );
+}
+
 function FeaturedEvent({ event }) {
   const ref = useScrollReveal();
   return (
@@ -179,6 +211,22 @@ export default function Events() {
               Subscribe
             </a>
           </div>
+        </div>
+      </section>
+
+      {/* Past Events */}
+      <section className="pb-24 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+        <div className="text-center mb-12">
+          <span className="font-label-md text-label-md text-secondary uppercase tracking-[0.3em] mb-4 block">Moments We've Created</span>
+          <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">Past Events</h2>
+          <p className="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
+            A look back at the parties, festivals, and celebrations we've had the pleasure of bringing to life.
+          </p>
+        </div>
+        <div className="columns-1 sm:columns-2 lg:columns-3 gap-gutter [column-fill:balance]">
+          {PAST_EVENTS.map((photo) => (
+            <PastEventPhoto key={photo.src} photo={photo} />
+          ))}
         </div>
       </section>
 

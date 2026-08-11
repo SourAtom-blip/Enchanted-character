@@ -1,3 +1,5 @@
+import { getImageStyle } from '../utils/imageCrop.js';
+
 export default function CharacterCard({ character }) {
   const { name, tag, imageUrl } = character;
 
@@ -5,7 +7,7 @@ export default function CharacterCard({ character }) {
     <div className="group relative aspect-[3/4] vellum-card rounded-xl overflow-hidden cursor-pointer floating-glow transition-all duration-300 hover:scale-[1.02] hover:border-secondary/50">
       <div
         className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110 flex items-center justify-center"
-        style={{ backgroundImage: imageUrl ? `url("${imageUrl}")` : undefined, backgroundColor: '#20201c' }}
+        style={{ ...getImageStyle(imageUrl), backgroundColor: '#20201c' }}
       >
         {!imageUrl && <span className="material-symbols-outlined text-on-surface-variant/30 text-6xl">person</span>}
       </div>

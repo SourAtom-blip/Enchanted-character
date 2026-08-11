@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import api from '../api/client.js';
 import ShimmerButton from '../components/ShimmerButton.jsx';
 import useScrollReveal from '../hooks/useScrollReveal.js';
+import { getImageStyle } from '../utils/imageCrop.js';
 
 const SANTA_SLUGS = { JD: 'jd', Jansen: 'jansen', Fred: 'fred', David: 'david' };
 const MRS_CLAUS_SLUGS = { Lorrie: 'lorrie', Lisa: 'lisa' };
@@ -21,7 +22,7 @@ function CharacterFeature({ character }) {
       <div className="relative aspect-[3/4] overflow-hidden">
         <div
           className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 flex items-center justify-center"
-          style={{ backgroundImage: imageUrl ? `url("${imageUrl}")` : undefined, backgroundColor: '#20201c' }}
+          style={{ ...getImageStyle(imageUrl), backgroundColor: '#20201c' }}
         >
           {!imageUrl && <span className="material-symbols-outlined text-on-surface-variant/30 text-7xl">person</span>}
         </div>
