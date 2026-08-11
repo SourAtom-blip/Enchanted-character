@@ -9,6 +9,7 @@ import ArtPieceDetail from './pages/ArtPieceDetail.jsx';
 import Events from './pages/Events.jsx';
 import EventDetail from './pages/EventDetail.jsx';
 import TopPerformers from './pages/TopPerformers.jsx';
+import SantaCatalog from './pages/SantaCatalog.jsx';
 import Contact from './pages/Contact.jsx';
 import GenericPage from './pages/GenericPage.jsx';
 import AdminLogin from './admin/AdminLogin.jsx';
@@ -48,6 +49,7 @@ export default function App() {
         <Route path="/events" element={<Events />} />
         <Route path="/events/:id" element={<EventDetail />} />
         <Route path="/top-performers" element={<TopPerformers />} />
+        <Route path="/characters/santas/:slug" element={<SantaCatalog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/:slug" element={<GenericPage />} />
       </Route>
