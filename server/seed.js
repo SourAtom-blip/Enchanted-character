@@ -56,6 +56,27 @@ async function seed() {
     console.log('Seeded characters.');
   }
 
+  const santaCount = await Character.countDocuments({ category: 'Santas' });
+  if (santaCount === 0) {
+    await Character.insertMany([
+      {
+        name: 'JD',
+        tag: 'Santa',
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786462750/enchanted-arts/magt69yg0ztlmpkkosh3.jpg',
+        category: 'Santas',
+        order: 0,
+      },
+      {
+        name: 'Jansen',
+        tag: 'Santa',
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786462752/enchanted-arts/zntknswolvfyyotugyqj.jpg',
+        category: 'Santas',
+        order: 1,
+      },
+    ]);
+    console.log('Seeded Santas.');
+  }
+
   const galleryCount = await GalleryItem.countDocuments();
   if (galleryCount === 0) {
     await GalleryItem.insertMany([

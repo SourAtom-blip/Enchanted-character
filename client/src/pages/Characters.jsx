@@ -10,9 +10,11 @@ function CharacterFeature({ character }) {
     <div ref={ref} className="reveal vellum-card rounded-xl overflow-hidden group">
       <div className="relative aspect-[3/4] overflow-hidden">
         <div
-          className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110"
+          className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-110 flex items-center justify-center"
           style={{ backgroundImage: imageUrl ? `url("${imageUrl}")` : undefined, backgroundColor: '#20201c' }}
-        />
+        >
+          {!imageUrl && <span className="material-symbols-outlined text-on-surface-variant/30 text-7xl">person</span>}
+        </div>
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent opacity-80" />
         {tag && (
           <div className="absolute bottom-4 left-6">
@@ -46,6 +48,9 @@ export default function Characters() {
       .catch(() => setCharacters([]));
   }, []);
 
+  const mainCharacters = characters.filter((c) => c.category !== 'Santas');
+  const santas = characters.filter((c) => c.category === 'Santas').sort((a, b) => a.order - b.order);
+
   return (
     <main className="pb-24">
       <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop text-center mb-20 pt-16">
@@ -60,7 +65,7 @@ export default function Characters() {
 
       <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-          {characters.map((c) => (
+          {mainCharacters.map((c) => (
             <CharacterFeature key={c._id} character={c} />
           ))}
           {characters.length === 0 && (
@@ -68,6 +73,27 @@ export default function Characters() {
           )}
         </div>
       </section>
+
+      {santas.length > 0 && (
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-24">
+          <div className="text-center mb-12">
+            <h2 className="font-headline-md text-headline-md text-secondary mb-3">Our Santas</h2>
+            <p className="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
+              Meet our beloved Santa performers, ranked by holiday magic.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+            {santas.map((c, i) => (
+              <div key={c._id} className="relative">
+                <span className="absolute -top-3 -left-3 z-10 w-10 h-10 rounded-full bg-secondary text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center shadow-lg">
+                  {i + 1}
+                </span>
+                <CharacterFeature character={c} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       <section className="mt-24 max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         <div className="vellum-card rounded-2xl p-12 relative overflow-hidden">

@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import api from '../api/client.js';
 import ImageUploadField from './ImageUploadField.jsx';
 
-const EMPTY = { name: '', tag: '', imageUrl: '', description: '', order: 0, published: true };
+const EMPTY = { name: '', tag: '', imageUrl: '', description: '', category: '', order: 0, published: true };
 
 export default function AdminCharacters() {
   const [items, setItems] = useState([]);
@@ -87,6 +87,16 @@ export default function AdminCharacters() {
               rows={3}
               value={editing.description}
               onChange={(e) => setEditing({ ...editing, description: e.target.value })}
+              className="w-full bg-surface border border-on-background/20 rounded-lg px-3 py-2 text-on-surface"
+            />
+          </div>
+          <div>
+            <label className="font-label-md text-label-md text-on-surface-variant block mb-1">
+              Category (optional, e.g. "Santas" to group into a subcategory)
+            </label>
+            <input
+              value={editing.category}
+              onChange={(e) => setEditing({ ...editing, category: e.target.value })}
               className="w-full bg-surface border border-on-background/20 rounded-lg px-3 py-2 text-on-surface"
             />
           </div>

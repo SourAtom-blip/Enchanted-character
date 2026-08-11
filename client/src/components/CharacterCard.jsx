@@ -4,9 +4,11 @@ export default function CharacterCard({ character }) {
   return (
     <div className="group relative aspect-[3/4] vellum-card rounded-xl overflow-hidden cursor-pointer floating-glow transition-all duration-300 hover:scale-[1.02] hover:border-secondary/50">
       <div
-        className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+        className="w-full h-full bg-cover bg-center transition-transform duration-500 group-hover:scale-110 flex items-center justify-center"
         style={{ backgroundImage: imageUrl ? `url("${imageUrl}")` : undefined, backgroundColor: '#20201c' }}
-      />
+      >
+        {!imageUrl && <span className="material-symbols-outlined text-on-surface-variant/30 text-6xl">person</span>}
+      </div>
       <div className="absolute inset-0 bg-gradient-to-t from-surface-container-lowest via-transparent to-transparent opacity-80" />
       <div className="absolute bottom-0 left-0 right-0 p-6">
         {tag && (
