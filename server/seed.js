@@ -62,14 +62,14 @@ async function seed() {
       {
         name: 'JD',
         tag: 'Santa',
-        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786462750/enchanted-arts/magt69yg0ztlmpkkosh3.jpg',
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786464372/enchanted-arts/pzlhq1x8mw6c60s7krin.jpg',
         category: 'Santas',
         order: 0,
       },
       {
         name: 'Jansen',
         tag: 'Santa',
-        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786462752/enchanted-arts/zntknswolvfyyotugyqj.jpg',
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786464374/enchanted-arts/pxexcmbimli38wk6gu6k.jpg',
         category: 'Santas',
         order: 1,
       },

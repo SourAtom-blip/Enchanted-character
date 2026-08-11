@@ -1,26 +1,19 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import useScrollReveal from '../hooks/useScrollReveal.js';
 
+const JD_EXTS = ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'png', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png'];
+const JANSEN_EXTS = ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'png'];
+
 const SANTAS = {
   jd: {
     name: 'JD',
     tag: 'Santa #1',
-    images: ['/santas/jd/1.jpg', '/santas/jd/2.jpg', '/santas/jd/3.jpg', '/santas/jd/4.jpg', '/santas/jd/5.png', '/santas/jd/6.jpg', '/santas/jd/7.jpg'],
+    images: JD_EXTS.map((ext, i) => `/santas/jd/${i + 1}.${ext}`),
   },
   jansen: {
     name: 'Jansen',
     tag: 'Santa #2',
-    images: [
-      '/santas/jansen/1.jpg',
-      '/santas/jansen/2.jpg',
-      '/santas/jansen/3.jpg',
-      '/santas/jansen/4.jpg',
-      '/santas/jansen/5.jpg',
-      '/santas/jansen/6.jpg',
-      '/santas/jansen/7.jpg',
-      '/santas/jansen/8.jpg',
-      '/santas/jansen/9.jpg',
-    ],
+    images: JANSEN_EXTS.map((ext, i) => `/santas/jansen/${i + 1}.${ext}`),
   },
 };
 
