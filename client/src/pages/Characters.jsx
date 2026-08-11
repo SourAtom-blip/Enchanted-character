@@ -4,7 +4,8 @@ import api from '../api/client.js';
 import ShimmerButton from '../components/ShimmerButton.jsx';
 import useScrollReveal from '../hooks/useScrollReveal.js';
 
-const SANTA_SLUGS = { JD: 'jd', Jansen: 'jansen' };
+const SANTA_SLUGS = { JD: 'jd', Jansen: 'jansen', Fred: 'fred', David: 'david' };
+const ORDINALS = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th'];
 
 function CharacterFeature({ character }) {
   const ref = useScrollReveal();
@@ -97,8 +98,8 @@ export default function Characters() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
             {santas.map((c, i) => (
               <div key={c._id} className="relative">
-                <span className="absolute -top-3 -left-3 z-10 w-10 h-10 rounded-full bg-secondary text-on-secondary font-headline-sm text-headline-sm flex items-center justify-center shadow-lg">
-                  {i + 1}
+                <span className="absolute -top-3 -left-3 z-10 px-4 h-10 rounded-full bg-secondary text-on-secondary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center shadow-lg whitespace-nowrap">
+                  {ORDINALS[i] || `${i + 1}th`} Performing Santa
                 </span>
                 <CharacterFeature character={c} />
               </div>

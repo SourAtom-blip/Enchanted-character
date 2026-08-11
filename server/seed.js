@@ -73,6 +73,20 @@ async function seed() {
         category: 'Santas',
         order: 1,
       },
+      {
+        name: 'Fred',
+        tag: 'Santa',
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786464713/enchanted-arts/lx7ehfjroqfkxdpfhgvv.jpg',
+        category: 'Santas',
+        order: 2,
+      },
+      {
+        name: 'David',
+        tag: 'Santa',
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786464715/enchanted-arts/ac8teearqi8hleb6sy5w.jpg',
+        category: 'Santas',
+        order: 3,
+      },
     ]);
     console.log('Seeded Santas.');
   }

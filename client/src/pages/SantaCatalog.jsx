@@ -3,17 +3,29 @@ import useScrollReveal from '../hooks/useScrollReveal.js';
 
 const JD_EXTS = ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'png', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png', 'jpg', 'png'];
 const JANSEN_EXTS = ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'png'];
+const FRED_EXTS = ['jpg', 'png', 'jpg', 'png'];
+const DAVID_EXTS = ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'];
 
 const SANTAS = {
   jd: {
     name: 'JD',
-    tag: 'Santa #1',
+    tag: '1st Performing Santa',
     images: JD_EXTS.map((ext, i) => `/santas/jd/${i + 1}.${ext}`),
   },
   jansen: {
     name: 'Jansen',
-    tag: 'Santa #2',
+    tag: '2nd Performing Santa',
     images: JANSEN_EXTS.map((ext, i) => `/santas/jansen/${i + 1}.${ext}`),
+  },
+  fred: {
+    name: 'Fred',
+    tag: '3rd Performing Santa',
+    images: FRED_EXTS.map((ext, i) => `/santas/fred/${i + 1}.${ext}`),
+  },
+  david: {
+    name: 'David',
+    tag: '4th Performing Santa',
+    images: DAVID_EXTS.map((ext, i) => `/santas/david/${i + 1}.${ext}`),
   },
 };
 
