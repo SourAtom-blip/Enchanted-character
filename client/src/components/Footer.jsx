@@ -22,10 +22,14 @@ export default function Footer() {
     <footer className="bg-surface-container-lowest border-t border-secondary/10 mt-12 relative z-10">
       <div className="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
         <div className="flex flex-col gap-4">
-          <div className="font-headline-sm text-headline-sm text-secondary italic">Lorrie's Enchanted Arts</div>
+          <div className="font-headline-sm text-headline-sm text-secondary italic">Once Upon A Party</div>
           <p className="font-body-md text-body-md text-on-surface-variant max-w-xs">
-            Professional character entertainment and bespoke artistic wonders for the discerning magic-seeker.
+            Professional character entertainment for the Permian Basin — princesses, superheroes, Santa &amp; Mrs.
+            Claus, and more.
           </p>
+          <a href="tel:4325286942" className="font-label-md text-label-md text-secondary hover:underline">
+            432-528-6942
+          </a>
           <div className="flex gap-4 mt-2">
             <a className="text-on-surface-variant hover:text-secondary transition-colors" href="#">
               <span className="material-symbols-outlined">qr_code_2</span>
@@ -120,8 +124,7 @@ export default function Footer() {
       </div>
       <div className="border-t border-secondary/5 py-8 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
         <p className="font-body-md text-body-md text-on-surface-variant text-center opacity-80">
-          © 2024 Lorrie's Character Entertainment. All performers are fully vetted and background-checked for your
-          family's safety.
+          © 2026 Once Upon A Party. All performers are fully vetted and background-checked for your family's safety.
         </p>
       </div>
     </footer>

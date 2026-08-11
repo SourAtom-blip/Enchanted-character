@@ -27,7 +27,7 @@ export default function AdminLogin() {
   return (
     <div className="min-h-screen bg-surface-container-lowest flex items-center justify-center px-margin-mobile">
       <form onSubmit={handleSubmit} className="w-full max-w-md bg-surface-container rounded-2xl border border-secondary/20 p-8">
-        <h1 className="font-headline-sm text-headline-sm text-secondary mb-1">Lorrie's Enchanted Arts</h1>
+        <h1 className="font-headline-sm text-headline-sm text-secondary mb-1">Once Upon A Party</h1>
         <p className="font-body-md text-body-md text-on-surface-variant mb-8">Admin Portal</p>
 
         <div className="mb-4">

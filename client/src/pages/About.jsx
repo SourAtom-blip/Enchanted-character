@@ -27,12 +27,12 @@ export default function About() {
           Our Legacy
         </span>
         <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-secondary mb-8 leading-tight">
-          From Seasonal Magic to <br />
-          Year-Round Enchantment
+          From the Permian Basin Santa Crew <br />
+          to Once Upon A Party
         </h1>
         <p className="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
-          For over a decade, we've specialized in the art of belief. What began as a premium Santa service has
-          blossomed into a full-scale character entertainment studio.
+          We are not just photo props — we are entertainers, and we love what we do. What began as a beloved Santa
+          service has grown into a full roster of characters available to book all year long.
         </p>
       </section>
 
@@ -45,10 +45,11 @@ export default function About() {
               style={{ backgroundImage: `url("${IMG.santa}")` }}
             />
             <div className="absolute inset-0 bg-gradient-to-t from-background/90 to-transparent flex flex-col justify-end p-8">
-              <h3 className="font-headline-md text-headline-md text-secondary mb-2">12 Years of Traditions</h3>
+              <h3 className="font-headline-md text-headline-md text-secondary mb-2">13 Years of Tradition</h3>
               <p className="font-body-md text-body-md text-on-surface">
-                The foundation of Lorrie's Enchanted Arts was built on twelve seasons of providing the most authentic
-                Santa experiences in the region.
+                Once Upon A Party started as the Permian Basin Santa Crew. Owner Lorrie Norris and her husband JD
+                have been performing as Mr. and Mrs. Claus for thirteen years, building a solid reputation
+                throughout the Permian Basin — so much so that many clients pre-book their spots year after year.
               </p>
             </div>
           </div>
@@ -60,18 +61,19 @@ export default function About() {
             </div>
             <h3 className="font-headline-sm text-headline-sm text-secondary">The Evolution</h3>
             <p className="text-on-surface-variant">
-              As the demand for professional character work grew, Lorrie recognized a need for higher standards in
-              children's entertainment. In 2024, she expanded the business to include a full roster of fairytale
-              royalty, superheroes, and mythical beings.
+              We worked so hard to build our reputation that we found the need to expand our Santa team to
+              accommodate more clients. In 2026, we added the Easter Bunny to the family — and while running an ad
+              for bunny bookings, we saw an opportunity to offer characters that could be booked year-round. That's
+              the moment Once Upon A Party was born.
             </p>
             <div className="grid grid-cols-2 gap-4 mt-4">
               <div className="bg-surface-container rounded-lg p-4 text-center border border-white/5">
-                <span className="block text-secondary font-headline-md text-headline-md">15+</span>
-                <span className="text-caption font-caption text-on-surface-variant uppercase">Characters</span>
+                <span className="block text-secondary font-headline-md text-headline-md">13+</span>
+                <span className="text-caption font-caption text-on-surface-variant uppercase">Years</span>
               </div>
               <div className="bg-surface-container rounded-lg p-4 text-center border border-white/5">
-                <span className="block text-secondary font-headline-md text-headline-md">500+</span>
-                <span className="text-caption font-caption text-on-surface-variant uppercase">Events</span>
+                <span className="block text-secondary font-headline-md text-headline-md">Year-Round</span>
+                <span className="text-caption font-caption text-on-surface-variant uppercase">Booking</span>
               </div>
             </div>
           </div>
@@ -97,7 +99,7 @@ export default function About() {
               The Standard of <span className="text-secondary">Professional Magic</span>
             </h2>
             <p className="font-body-lg text-body-lg text-on-surface-variant italic">
-              "We don't just put on costumes; we inhabit stories."
+              "We are not cardboard cut-out characters. Our performers are entertainers — and we love what we do."
             </p>
             <div className="space-y-6">
               <div className="flex gap-4">
@@ -105,18 +107,18 @@ export default function About() {
                 <div>
                   <h4 className="font-label-md text-label-md text-on-surface uppercase mb-1">Vetted Performers</h4>
                   <p className="text-on-surface-variant">
-                    Every member of our team undergoes rigorous background checks and character safety training to
-                    ensure peace of mind for every family.
+                    Every performer is carefully vetted, able to pass a background check and drug screening, and is
+                    a non-smoker — so you can have complete peace of mind.
                   </p>
                 </div>
               </div>
               <div className="flex gap-4">
                 <span className="material-symbols-outlined text-secondary mt-1">theater_comedy</span>
                 <div>
-                  <h4 className="font-label-md text-label-md text-on-surface uppercase mb-1">Theatrical Excellence</h4>
+                  <h4 className="font-label-md text-label-md text-on-surface uppercase mb-1">Real Entertainers</h4>
                   <p className="text-on-surface-variant">
-                    Our actors are professionally trained in character improv, vocal performance, and stage presence
-                    to maintain the illusion from start to finish.
+                    Many of our performers come from a theater or music background. They sing, tell stories, read
+                    books, play games, and interact with your guests to make the event even more magical.
                   </p>
                 </div>
               </div>
@@ -141,36 +143,69 @@ export default function About() {
               <span className="text-secondary font-label-md text-label-md uppercase tracking-widest mb-4 block">
                 Meet the Founder
               </span>
-              <h2 className="font-display-lg text-display-lg text-on-surface mb-6">Lorrie: Artist &amp; Storyteller</h2>
+              <h2 className="font-display-lg text-display-lg text-on-surface mb-6">Lorrie Norris: Owner &amp; Mrs. Claus</h2>
               <div className="space-y-6 font-body-lg text-body-lg text-on-surface-variant">
                 <p>
-                  Lorrie's journey is rooted in a lifelong passion for both the visual and performing arts. As a
-                  classically trained artist, she spent decades mastering the fine details of character design and
-                  portraiture, which naturally transitioned into the world of live entertainment.
+                  Lorrie Norris and her husband JD have been performing as Mr. and Mrs. Claus for thirteen years,
+                  starting out as the Permian Basin Santa Crew. Together they built a loyal following across the
+                  Permian Basin — proof that families were looking for real entertainers, not just photo props.
                 </p>
                 <p>
-                  Her unique perspective allows her to approach every event as a canvas. She doesn't just manage the
-                  performance; she curates the visual aesthetic, from the hand-painted details on a crown to the
-                  specific fabric choices that catch the light during a royal ball.
+                  As demand grew, Lorrie expanded the Santa team to accommodate more clients, then added the Easter
+                  Bunny in 2026. That's when she saw the opportunity to offer beloved characters year-round —
+                  princesses, superheroes, and more — and Once Upon A Party was born.
                 </p>
               </div>
             </div>
             <div className="mt-12 flex flex-wrap gap-4">
               <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary-container">
-                <span className="material-symbols-outlined text-[20px]">palette</span>
-                <span className="font-label-md text-label-md">Professional Painter</span>
+                <span className="material-symbols-outlined text-[20px]">storefront</span>
+                <span className="font-label-md text-label-md">Owner</span>
               </div>
               <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary-container">
-                <span className="material-symbols-outlined text-[20px]">psychology</span>
-                <span className="font-label-md text-label-md">Creative Director</span>
+                <span className="material-symbols-outlined text-[20px]">favorite</span>
+                <span className="font-label-md text-label-md">Mrs. Claus Performer</span>
               </div>
               <div className="flex items-center gap-2 px-6 py-3 rounded-full bg-primary-container text-on-primary-container">
                 <span className="material-symbols-outlined text-[20px]">star</span>
-                <span className="font-label-md text-label-md">Performative Specialist</span>
+                <span className="font-label-md text-label-md">13+ Years Experience</span>
               </div>
             </div>
           </div>
         </div>
+      </Reveal>
+
+      {/* What We Offer */}
+      <Reveal className="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto mb-32">
+        <div className="text-center mb-12">
+          <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-4">
+            Need a Single Princess, a Lone Superhero, <span className="text-secondary italic">or a Whole Team?</span>
+          </h2>
+          <p className="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
+            However you imagine your event, we can help bring it to life.
+          </p>
+        </div>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+          {[
+            { icon: 'emoji_food_beverage', title: 'Princess Tea Party', desc: 'A royal afternoon with your favorite storybook princesses.' },
+            { icon: 'celebration', title: 'Superhero Pizza Party', desc: 'Action-packed fun with your favorite heroes.' },
+            { icon: 'auto_awesome', title: 'Quinceañera Fairies', desc: 'A whole team of fairies for her special day.' },
+            { icon: 'home', title: 'Home Birthday Parties', desc: 'Bringing the magic straight to your front door.' },
+            { icon: 'diversity_3', title: 'Community & Business Events', desc: 'Outreach events, promotions, and school functions.' },
+            { icon: 'local_hospital', title: 'Hospital Visits', desc: 'Because every child deserves a little magic.' },
+          ].map((item) => (
+            <div key={item.title} className="vellum-card rounded-xl p-6 text-center">
+              <span className="material-symbols-outlined text-secondary text-4xl mb-4" style={{ fontVariationSettings: "'FILL' 1" }}>
+                {item.icon}
+              </span>
+              <h4 className="font-headline-sm text-headline-sm text-on-surface mb-2">{item.title}</h4>
+              <p className="text-on-surface-variant font-body-md text-body-md">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-center font-body-md text-body-md text-on-surface-variant mt-10 max-w-xl mx-auto italic">
+          Don't see the character you're looking for? Message us — we may be able to work it out.
+        </p>
       </Reveal>
 
       {/* Mission */}
@@ -179,17 +214,17 @@ export default function About() {
           <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-secondary to-transparent opacity-50" />
           <h2 className="font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-8">Our Mission</h2>
           <p className="max-w-3xl mx-auto font-headline-sm text-headline-sm text-secondary-fixed-dim leading-relaxed">
-            To bridge the gap between imagination and reality by providing world-class, professional character
-            entertainment that honors the wonder of childhood and the artistry of performance.
+            We love performing for everyone — of all ages, all backgrounds, all cultures, and all abilities. We
+            also visit children in hospitals, because every child deserves a little magic.
           </p>
-          <div className="mt-12 flex justify-center gap-8">
+          <div className="mt-12 flex flex-wrap justify-center gap-8">
             <div className="text-center">
               <span className="material-symbols-outlined text-secondary text-4xl mb-2">favorite</span>
               <p className="text-caption font-caption uppercase tracking-widest text-on-surface-variant">Heart-First Service</p>
             </div>
             <div className="text-center">
-              <span className="material-symbols-outlined text-secondary text-4xl mb-2">brush</span>
-              <p className="text-caption font-caption uppercase tracking-widest text-on-surface-variant">Artistic Integrity</p>
+              <span className="material-symbols-outlined text-secondary text-4xl mb-2">diversity_3</span>
+              <p className="text-caption font-caption uppercase tracking-widest text-on-surface-variant">Inclusive for All</p>
             </div>
             <div className="text-center">
               <span className="material-symbols-outlined text-secondary text-4xl mb-2">safety_check</span>

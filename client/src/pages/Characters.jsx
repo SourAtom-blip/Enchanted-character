@@ -139,9 +139,9 @@ export default function Characters() {
                 Safe. Professional. <span className="text-secondary italic">Magical.</span>
               </h2>
               <p className="font-body-lg text-body-lg text-on-surface-variant mb-8">
-                We believe that magic is only possible when built upon a foundation of trust. Every Lorrie's
-                Enchanted Arts performer undergoes a rigorous selection process to ensure your family's safety and
-                the highest artistic quality.
+                We believe that magic is only possible when built upon a foundation of trust. Every Once Upon A
+                Party performer undergoes a rigorous selection process — including a background check and drug
+                screening — to ensure your family's safety and the highest artistic quality.
               </p>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div className="flex items-start gap-4">

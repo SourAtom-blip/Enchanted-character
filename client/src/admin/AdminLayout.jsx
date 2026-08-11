@@ -22,7 +22,7 @@ export default function AdminLayout() {
     <div className="min-h-screen bg-surface-container-lowest flex text-on-surface">
       <aside className="w-64 bg-surface-container border-r border-secondary/10 flex flex-col shrink-0">
         <div className="p-6 border-b border-secondary/10">
-          <h1 className="font-headline-sm text-headline-sm text-secondary">Enchanted Arts</h1>
+          <h1 className="font-headline-sm text-headline-sm text-secondary">Once Upon A Party</h1>
           <p className="font-caption text-caption text-on-surface-variant">Admin Portal</p>
         </div>
         <nav className="flex-1 p-4 space-y-1">

@@ -36,7 +36,7 @@ export default function TopPerformers() {
       <div className="text-center mb-16">
         <h1 className="font-display-lg text-display-lg-mobile md:text-display-lg text-secondary mb-4">Top Performers</h1>
         <p className="max-w-2xl mx-auto font-body-lg text-body-lg text-on-surface-variant">
-          Meet the talented artists and performers who bring Lorrie's Enchanted Arts to life at every event.
+          Meet the talented artists and performers who bring Once Upon A Party to life at every event.
         </p>
       </div>
 
