@@ -5,6 +5,8 @@ const JD_EXTS = ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 
 const JANSEN_EXTS = ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'png'];
 const FRED_EXTS = ['jpg', 'png', 'jpg', 'png'];
 const DAVID_EXTS = ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'jpg'];
+const LORRIE_EXTS = ['jpg', 'jpg', 'jpg', 'jpg', 'jpg', 'png', 'jpg', 'jpg', 'png'];
+const LISA_EXTS = ['jpg', 'jpg', 'jpg'];
 
 const SANTAS = {
   jd: {
@@ -26,6 +28,16 @@ const SANTAS = {
     name: 'David',
     tag: '4th Performing Santa',
     images: DAVID_EXTS.map((ext, i) => `/santas/david/${i + 1}.${ext}`),
+  },
+  lorrie: {
+    name: 'Lorrie',
+    tag: 'Mrs. Claus',
+    images: LORRIE_EXTS.map((ext, i) => `/mrs-claus/lorrie/${i + 1}.${ext}`),
+  },
+  lisa: {
+    name: 'Lisa',
+    tag: 'Mrs. Claus',
+    images: LISA_EXTS.map((ext, i) => `/mrs-claus/lisa/${i + 1}.${ext}`),
   },
 };
 

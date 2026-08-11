@@ -91,6 +91,31 @@ async function seed() {
     console.log('Seeded Santas.');
   }
 
+  const mrsClausCount = await Character.countDocuments({ category: 'MrsClaus' });
+  if (mrsClausCount === 0) {
+    await Character.insertMany([
+      {
+        name: 'Lorrie',
+        tag: 'Mrs. Claus',
+        category: 'MrsClaus',
+        order: 0,
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786465661/enchanted-arts/cpjgrt12lwxac7dhmyka.jpg',
+        description:
+          'Miss Lorrie is a favorite for "Storytime with Mrs Claus". She is available to do crafts, help kids, write letters to Santa, play games, Christmas coloring pages, sing Christmas carols and sing alongs, as well as reading and entertaining. She and JD have been performing as Mr. and Mrs. Claus for 13 years as of 2026.',
+      },
+      {
+        name: 'Lisa',
+        tag: 'Mrs. Claus',
+        category: 'MrsClaus',
+        order: 1,
+        imageUrl: 'https://res.cloudinary.com/fl5vkej3/image/upload/v1786465662/enchanted-arts/icexokaf6f2uug09ghhs.jpg',
+        description:
+          "Lisa is one of our newest members of the Santa team. Kids love to hear her read delightful Christmas stories. And tell them all about the reindeer.",
+      },
+    ]);
+    console.log('Seeded Mrs. Claus.');
+  }
+
   const galleryCount = await GalleryItem.countDocuments();
   if (galleryCount === 0) {
     await GalleryItem.insertMany([

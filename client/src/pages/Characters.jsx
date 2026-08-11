@@ -5,12 +5,17 @@ import ShimmerButton from '../components/ShimmerButton.jsx';
 import useScrollReveal from '../hooks/useScrollReveal.js';
 
 const SANTA_SLUGS = { JD: 'jd', Jansen: 'jansen', Fred: 'fred', David: 'david' };
+const MRS_CLAUS_SLUGS = { Lorrie: 'lorrie', Lisa: 'lisa' };
 const ORDINALS = ['1st', '2nd', '3rd', '4th', '5th', '6th', '7th', '8th'];
 
 function CharacterFeature({ character }) {
   const ref = useScrollReveal();
   const { name, tag, imageUrl, description } = character;
-  const santaSlug = SANTA_SLUGS[name];
+  const catalogSlug = SANTA_SLUGS[name]
+    ? { group: 'santas', slug: SANTA_SLUGS[name] }
+    : MRS_CLAUS_SLUGS[name]
+      ? { group: 'mrs-claus', slug: MRS_CLAUS_SLUGS[name] }
+      : null;
   return (
     <div ref={ref} className="reveal vellum-card rounded-xl overflow-hidden group">
       <div className="relative aspect-[3/4] overflow-hidden">
@@ -32,9 +37,9 @@ function CharacterFeature({ character }) {
       <div className="p-8">
         <h3 className="font-headline-md text-headline-md mb-3 text-secondary">{name}</h3>
         {description && <p className="font-body-md text-body-md text-on-surface-variant mb-6">{description}</p>}
-        {santaSlug && (
+        {catalogSlug && (
           <Link
-            to={`/characters/santas/${santaSlug}`}
+            to={`/characters/${catalogSlug.group}/${catalogSlug.slug}`}
             className="w-full mb-3 block text-center py-3 px-6 bg-secondary/10 border border-secondary/40 text-secondary font-label-md text-label-md uppercase tracking-widest hover:bg-secondary hover:text-on-secondary transition-all rounded-lg"
           >
             View {name}'s Photo Catalog
@@ -61,8 +66,9 @@ export default function Characters() {
       .catch(() => setCharacters([]));
   }, []);
 
-  const mainCharacters = characters.filter((c) => c.category !== 'Santas');
+  const mainCharacters = characters.filter((c) => c.category !== 'Santas' && c.category !== 'MrsClaus');
   const santas = characters.filter((c) => c.category === 'Santas').sort((a, b) => a.order - b.order);
+  const mrsClauses = characters.filter((c) => c.category === 'MrsClaus').sort((a, b) => a.order - b.order);
 
   return (
     <main className="pb-24">
@@ -103,6 +109,22 @@ export default function Characters() {
                 </span>
                 <CharacterFeature character={c} />
               </div>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {mrsClauses.length > 0 && (
+        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-24">
+          <div className="text-center mb-12">
+            <h2 className="font-headline-md text-headline-md text-secondary mb-3">Meet Our Mrs. Claus</h2>
+            <p className="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
+              Storytelling, crafts, and Christmas cheer led by our beloved Mrs. Claus performers.
+            </p>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+            {mrsClauses.map((c) => (
+              <CharacterFeature key={c._id} character={c} />
             ))}
           </div>
         </section>

@@ -50,6 +50,7 @@ export default function App() {
         <Route path="/events/:id" element={<EventDetail />} />
         <Route path="/top-performers" element={<TopPerformers />} />
         <Route path="/characters/santas/:slug" element={<SantaCatalog />} />
+        <Route path="/characters/mrs-claus/:slug" element={<SantaCatalog />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/:slug" element={<GenericPage />} />
       </Route>
