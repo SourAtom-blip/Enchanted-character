@@ -8,8 +8,10 @@ const CROPS = [
   { match: 'AB6AXuCDExoZrRITq8YhcTL0yYYpT7TKHyz3wABAEGmBKzEzROYRlm_j4fOu_ycPEBafHeux', size: '220% 220%' }, // Celestial Citadel (caption bars + left edge strip)
   { match: 'AB6AXuAxCPNOpmmyX_9G168vrhsCgWHU-JmqWZU9JLD7G1E5EA66X7GzE-pRU8YKDnm5v_h', size: '160% 160%' }, // Abyssal Serenade (top caption bar)
   { match: 'AB6AXuD5CCW0xZVQquXf04zb26Gbj-cIl0yqbqc2DKviVCweMpAPtZ7t-U7-TWneENLJFxi', size: '160% 160%' }, // Grand Atelier Venue (top caption bar)
-  { match: 'd8awjhq9gyjmdses2xqd', size: '190% 190%', position: 'left center' }, // Elsa (isolate from duo photo)
-  { match: 'cglf1dfc2admmpkw94qt', size: '180% 180%', position: 'left top' }, // Batman (isolate from duo photo)
+  { match: 'd8awjhq9gyjmdses2xqd', size: '190% 190%', position: 'left top' }, // Elsa (isolate from duo photo, keep head in frame)
+  { match: 'cglf1dfc2admmpkw94qt', size: '140% 140%', position: 'left 15%' }, // Batman (isolate from duo photo, keep mask in frame)
+  { match: 'crnmjfj0nu31ocsihqc4', size: '100% 100%', position: 'top center' }, // Belle (keep tiara in frame)
+  { match: 'ymndpuapwjkl0l9txun1', size: '100% 100%', position: 'top center' }, // Moana (keep flower crown in frame)
 ];
 
 // Cloudinary-hosted images are uploaded at full resolution; inject an
