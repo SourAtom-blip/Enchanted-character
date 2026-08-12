@@ -25,6 +25,21 @@ const PAST_EVENTS = [
   { src: '/past-events/15.jpeg', caption: 'A magical family portrait' },
 ];
 
+const PAST_EVENT_VIDEOS = [
+  { src: 'https://res.cloudinary.com/fl5vkej3/video/upload/f_auto,q_auto/v1786482877/enchanted-arts/past-events-videos/uljpogkpplsxdskdgar5.mp4', caption: 'A magical moment in motion' },
+  { src: 'https://res.cloudinary.com/fl5vkej3/video/upload/f_auto,q_auto/v1786482884/enchanted-arts/past-events-videos/ljgoenkajad7g15rcvc1.mp4', caption: 'Bringing the story to life' },
+];
+
+function PastEventVideo({ video }) {
+  const ref = useScrollReveal();
+  return (
+    <div ref={ref} className="reveal vellum-card gilded-edge rounded-xl overflow-hidden mb-gutter break-inside-avoid">
+      <video src={video.src} controls playsInline preload="metadata" className="w-full h-auto block" />
+      <p className="font-label-md text-label-md text-secondary p-4">{video.caption}</p>
+    </div>
+  );
+}
+
 function PastEventPhoto({ photo }) {
   const ref = useScrollReveal();
   return (
@@ -224,6 +239,9 @@ export default function Events() {
           </p>
         </div>
         <div className="columns-1 sm:columns-2 lg:columns-3 gap-gutter [column-fill:balance]">
+          {PAST_EVENT_VIDEOS.map((video) => (
+            <PastEventVideo key={video.src} video={video} />
+          ))}
           {PAST_EVENTS.map((photo) => (
             <PastEventPhoto key={photo.src} photo={photo} />
           ))}
