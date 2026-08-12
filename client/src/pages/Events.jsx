@@ -26,15 +26,23 @@ const PAST_EVENTS = [
 ];
 
 const PAST_EVENT_VIDEOS = [
-  { src: 'https://res.cloudinary.com/fl5vkej3/video/upload/f_auto,q_auto/v1786482877/enchanted-arts/past-events-videos/uljpogkpplsxdskdgar5.mp4', caption: 'A magical moment in motion' },
-  { src: 'https://res.cloudinary.com/fl5vkej3/video/upload/f_auto,q_auto/v1786482884/enchanted-arts/past-events-videos/ljgoenkajad7g15rcvc1.mp4', caption: 'Bringing the story to life' },
+  {
+    src: 'https://res.cloudinary.com/fl5vkej3/video/upload/f_auto,q_auto/v1786482877/enchanted-arts/past-events-videos/uljpogkpplsxdskdgar5.mp4',
+    poster: 'https://res.cloudinary.com/fl5vkej3/video/upload/so_1/enchanted-arts/past-events-videos/uljpogkpplsxdskdgar5.jpg',
+    caption: 'A magical moment in motion',
+  },
+  {
+    src: 'https://res.cloudinary.com/fl5vkej3/video/upload/f_auto,q_auto/v1786482884/enchanted-arts/past-events-videos/ljgoenkajad7g15rcvc1.mp4',
+    poster: 'https://res.cloudinary.com/fl5vkej3/video/upload/so_1/enchanted-arts/past-events-videos/ljgoenkajad7g15rcvc1.jpg',
+    caption: 'Bringing the story to life',
+  },
 ];
 
 function PastEventVideo({ video }) {
   const ref = useScrollReveal();
   return (
     <div ref={ref} className="reveal vellum-card gilded-edge rounded-xl overflow-hidden mb-gutter break-inside-avoid">
-      <video src={video.src} controls playsInline preload="metadata" className="w-full h-auto block" />
+      <video src={video.src} poster={video.poster} controls playsInline preload="metadata" className="w-full h-auto block bg-surface-container" />
       <p className="font-label-md text-label-md text-secondary p-4">{video.caption}</p>
     </div>
   );
