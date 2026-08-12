@@ -10,12 +10,10 @@ function Reveal({ children, className = '' }) {
 }
 
 const IMG = {
-  santa:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuCVNYkvFZ7sXrwoEEIndFoIrG_wPyljTTJAVv4gZY-5B-m2qZ4hLGnR8DCgwHHEPb4wOVte_uPvcVrtx_QO0pnwxy4c7DAkqPFs8MmGV-YQlq5P4jpoDcgL7ZbunrJZT1S4YSPyNn2p-2UWJYtbOd6nV6rMRhofvjOsfQwatzNnDKGLcfMBwnejsiJYAieXv44I54anvDT_0cy2LghTZ6y9NIQBnA7QTHi0lPmROg9CAr4jfnPUYaDOQJdDp3o1wNnBC3W4C5cTngs',
+  santa: '/mrs-claus/lorrie/4.jpg',
   backstage:
     'https://lh3.googleusercontent.com/aida-public/AB6AXuCejpbFYexYUvENz9PfXaVcI0YAg216H4lvj5lEpp1lcFwLn41QTXiQNHMbhA3k9sVR79teBWo0xJ_7enT-1Y-H9Ea3no7_peUldbs9tAAr4MJCtKQMJ2DtHG90OSKQ0WhSwebHMKk-FLUhVKoRBW9LrjAfGyBKfceXpaYPHjPoDM4QcRcxXvYIKzi-uNEqHI_iIEBT_FgIRzNNWygJ0Xtjj9fsyr4trkF4cZCFRQ7Z4MgbzPr1Mtf95tdOnF9HNuvX_pjI5FuNfzM',
-  lorrie:
-    'https://lh3.googleusercontent.com/aida-public/AB6AXuBGnVHs6ipRuR_2Sbyx2K9y_lsbuG4rSjpHlz8heeoLNWY5FNOnY3yXqEFNhAVeMcdEczVcLcb5bdeQY_bIbmxT3Jr9Ix4xXr9Tz_0UDZmV8mBSqH92UPeUpGmX9fmFINUlDpC40s2Py9l0jG3VQS3mAcJDH-rn4WfnlC84Xdxtpy7d4ai55v3oyTDWLasBOn9fZa-eb2BkCPGtesO_WzN9pZ5uzdV72iDkVJZgzhRPluhx2N7OcMyEysw0MDHMMSpg4etenxoRGhM',
+  lorrie: 'https://res.cloudinary.com/fl5vkej3/image/upload/f_auto,q_auto/enchanted-arts/cpjgrt12lwxac7dhmyka.jpg',
 };
 
 export default function About() {
