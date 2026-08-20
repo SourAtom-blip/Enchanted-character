@@ -4,7 +4,7 @@ const PERFORMERS = [
   { name: 'SM', tag: '', image: '/top-performers/4.jpg' },
   { name: 'Moana', tag: '', image: '/top-performers/3.png' },
   { name: 'JM', tag: '', image: '/top-performers/6.png' },
-  { name: 'Ameri', tag: '', image: '/top-performers/7.png' },
+  { name: 'AC', tag: '', image: '/top-performers/7.png' },
   { name: 'Addison', tag: '', image: '/top-performers/8.png' },
   { name: 'Ryley', tag: '', image: '/top-performers/9.png' },
   { name: 'Abbie', tag: '', image: '/top-performers/10.png' },
