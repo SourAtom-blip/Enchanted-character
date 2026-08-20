@@ -10,6 +10,9 @@ const PERFORMERS = [
   { name: 'Abbie', tag: '', image: '/top-performers/10.png' },
   { name: 'Sonya', tag: '', image: '/top-performers/11.png' },
   { name: 'Mia', tag: '', image: '/top-performers/unnamed-mia.png' },
+  { name: 'HB', tag: '', image: '/top-performers/hb.jpg' },
+  { name: 'SM', tag: '', image: '/top-performers/sm.jpg' },
+  { name: 'SR', tag: '', image: '/top-performers/sr.jpg' },
 ];
 
 function PerformerCard({ performer }) {

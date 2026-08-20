@@ -67,9 +67,12 @@ export default function Characters() {
       .catch(() => setCharacters([]));
   }, []);
 
-  const mainCharacters = characters.filter((c) => c.category !== 'Santas' && c.category !== 'MrsClaus');
+  const holidayCategories = ['Santas', 'MrsClaus', 'Holiday'];
+  const mainCharacters = characters.filter((c) => !holidayCategories.includes(c.category));
   const santas = characters.filter((c) => c.category === 'Santas').sort((a, b) => a.order - b.order);
   const mrsClauses = characters.filter((c) => c.category === 'MrsClaus').sort((a, b) => a.order - b.order);
+  const easterBunnies = characters.filter((c) => c.category === 'Holiday').sort((a, b) => a.order - b.order);
+  const hasHoliday = santas.length > 0 || mrsClauses.length > 0 || easterBunnies.length > 0;
 
   return (
     <main className="pb-24">
@@ -84,6 +87,7 @@ export default function Characters() {
       </section>
 
       <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+        <h2 className="font-label-md text-label-md text-secondary uppercase tracking-[0.2em] text-center mb-8">Party Characters</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
           {mainCharacters.map((c) => (
             <CharacterFeature key={c._id} character={c} />
@@ -94,40 +98,43 @@ export default function Characters() {
         </div>
       </section>
 
-      {santas.length > 0 && (
+      {hasHoliday && (
         <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-24">
           <div className="text-center mb-12">
-            <h2 className="font-headline-md text-headline-md text-secondary mb-3">Our Santas</h2>
+            <h2 className="font-headline-md text-headline-md text-secondary mb-3">Beloved Holiday Characters</h2>
             <p className="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
-              Meet our beloved Santa performers, ranked by holiday magic.
+              Our Santas, Mrs. Claus performers, and Easter Bunny bring seasonal magic all year round.
             </p>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
-            {santas.map((c, i) => (
-              <div key={c._id} className="relative">
-                <span className="absolute -top-3 -left-3 z-10 px-4 h-10 rounded-full bg-secondary text-on-secondary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center shadow-lg whitespace-nowrap">
-                  {ORDINALS[i] || `${i + 1}th`} Performing Santa
-                </span>
-                <CharacterFeature character={c} />
-              </div>
-            ))}
-          </div>
-        </section>
-      )}
 
-      {mrsClauses.length > 0 && (
-        <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mt-24">
-          <div className="text-center mb-12">
-            <h2 className="font-headline-md text-headline-md text-secondary mb-3">Meet Our Mrs. Claus</h2>
-            <p className="font-body-md text-body-md text-on-surface-variant max-w-xl mx-auto">
-              Storytelling, crafts, and Christmas cheer led by our beloved Mrs. Claus performers.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter">
-            {mrsClauses.map((c) => (
-              <CharacterFeature key={c._id} character={c} />
-            ))}
-          </div>
+          {santas.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter mb-gutter">
+              {santas.map((c, i) => (
+                <div key={c._id} className="relative">
+                  <span className="absolute -top-3 -left-3 z-10 px-4 h-10 rounded-full bg-secondary text-on-secondary font-label-md text-label-md uppercase tracking-wider flex items-center justify-center shadow-lg whitespace-nowrap">
+                    {ORDINALS[i] || `${i + 1}th`} Performing Santa
+                  </span>
+                  <CharacterFeature character={c} />
+                </div>
+              ))}
+            </div>
+          )}
+
+          {mrsClauses.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-gutter mb-gutter">
+              {mrsClauses.map((c) => (
+                <CharacterFeature key={c._id} character={c} />
+              ))}
+            </div>
+          )}
+
+          {easterBunnies.length > 0 && (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+              {easterBunnies.map((c) => (
+                <CharacterFeature key={c._id} character={c} />
+              ))}
+            </div>
+          )}
         </section>
       )}
 
