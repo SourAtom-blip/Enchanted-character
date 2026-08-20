@@ -7,8 +7,8 @@ const PERFORMERS = [
   { name: 'AC', tag: '', image: '/top-performers/7.png' },
   { name: 'Addison', tag: '', image: '/top-performers/8.png' },
   { name: 'Ryley', tag: '', image: '/top-performers/9.png' },
-  { name: 'Abbie', tag: '', image: '/top-performers/10.png' },
-  { name: 'Sonya', tag: '', image: '/top-performers/11.png' },
+  { name: 'AW', tag: '', image: '/top-performers/10.png' },
+  { name: 'SC', tag: '', image: '/top-performers/11.png' },
   { name: 'Mia', tag: '', image: '/top-performers/unnamed-mia.png' },
   { name: 'SR', tag: '', image: '/top-performers/sr.jpg' },
 ];
